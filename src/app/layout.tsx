@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
@@ -102,6 +103,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           />
         ))}
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
