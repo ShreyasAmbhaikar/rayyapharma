@@ -108,7 +108,7 @@ const config: Config = {
       },
       backgroundImage: {
         'brand-gradient': 'linear-gradient(135deg, #50d9fe 0%, #085693 100%)',
-        'hero-overlay': 'linear-gradient(90deg, rgba(248,249,255,0.95) 0%, rgba(248,249,255,0.8) 45%, rgba(248,249,255,0) 100%)',
+        'hero-overlay': 'linear-gradient(90deg, #f8f9fff2 0%, #f8f9ffcc 15%, #f8f9ff00 100%)',
       },
       maxWidth: {
         'container-max': '1280px',

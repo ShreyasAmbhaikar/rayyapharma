@@ -1,28 +1,26 @@
-import { siteConfig } from '@/content/site';
-
 export const homeContent = {
   hero: {
-    eyebrow: 'Innovation in Healthcare',
-    title: 'Precise science,',
-    highlight: 'personal care.',
+    eyebrow: 'Trusted Pharmaceutical Products',
+    title: 'Quality. Integrity.',
+    highlight: 'Dependable service.',
     description:
-      'Advancing modern medicine through rigorous research, global manufacturing excellence, and an unwavering commitment to patient well-being.',
+      'Rayya Pharma supplies trusted medicinal products through quality-led sourcing, responsible distribution, and reliable service that supports healthcare professionals with confidence.',
     primaryAction: {
       href: '/products/',
       label: 'Explore Our Products',
     },
     image: {
-      src: '/images/home/hero-lab.webp',
-      alt: 'Modern pharmaceutical laboratory with sleek equipment and cool blue lighting, with a glass vial in focus.',
+      src: '/images/home/falling-tablets.webp',
+      alt: 'Blue and white medicinal capsules floating against a soft blue background.',
     },
   },
   about: {
     heading: 'About Rayya',
-    note: siteConfig.placeholderNotice,
+    note: '',
     paragraphs: [
-      'Rayya Pharma Private Limited is an active private limited company incorporated on 6th June, 2025 and registered with the Registrar of Companies, Pune under CIN U47720PN2025PTC242739.',
-      'The company operates from Office No. 303, Business House, Dehu Road, Moshi, Pune, Haveli, Maharashtra, India, 412105, with an authorized capital of ₹1,00,000 and paid-up capital of ₹1,00,000.',
-      'Led by Managing Directors Poonam Devidas Karale and Nikita Devidas Karale, Rayya Pharma focuses on pharmaceutical and medical goods activity with a commitment to quality, compliance, and responsible long-term growth.',
+      '<strong>Rayya Pharma</strong> is built on the belief that <strong>quality</strong>, <strong>integrity</strong>, and dependable service should define every relationship in healthcare. Based in Pune, we are committed to bringing trusted medicinal products to the market through a professional, transparent, and long-term approach.',
+      'As a <strong>pharmaceutical marketing</strong> and <strong>distribution company</strong>, we focus on quality-led sourcing, responsible product selection, and reliable supply support. Our role is to connect healthcare professionals with dependable products backed by consistency, accountability, and a service standard they can trust.',
+      'Under the leadership of <strong>Managing Directors Poonam Devidas Karale</strong> and <strong>Nikita Devidas Karale</strong>, Rayya Pharma is dedicated to building a portfolio shaped by practical medical needs, ethical business values, and strong market understanding. Through thoughtful partnerships and disciplined execution, we aim to create lasting confidence among doctors, channel partners, and the communities they serve.',
     ],
   },
   corporate: {

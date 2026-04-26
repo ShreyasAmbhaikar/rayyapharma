@@ -45,7 +45,6 @@ export const siteConfig = {
     { href: '/', label: 'Home' },
     { href: '/our-story/', label: 'Our Story' },
     { href: '/products/', label: 'Products' },
-    { href: '/team/', label: 'Team' },
     { href: '/contact/', label: 'Contact' },
   ],
   footerGroups: [
@@ -55,7 +54,6 @@ export const siteConfig = {
         { href: '/', label: 'Home' },
         { href: '/our-story/', label: 'Our Story' },
         { href: '/products/', label: 'Products' },
-        { href: '/team/', label: 'Team' },
         { href: '/contact/', label: 'Contact' },
       ],
     },

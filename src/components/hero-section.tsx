@@ -7,7 +7,7 @@ export function HeroSection() {
   const { hero } = homeContent;
 
   return (
-    <section className="relative flex min-h-[819px] items-center overflow-hidden pt-14">
+    <section className="relative flex min-h-[819px] items-center overflow-hidden pt-6">
       <div className="absolute inset-0">
         <Image
           src={hero.image.src}
@@ -20,7 +20,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-hero-overlay" />
       </div>
 
-      <div className="section-shell relative z-10 py-12 md:py-24">
+      <div className="section-shell relative z-10 py-8 md:py-20">
         <div className="max-w-2xl">
           <span className="pill-label mb-6">{hero.eyebrow}</span>
           <h1 className="mb-6 font-h1 text-h1 text-on-background">
