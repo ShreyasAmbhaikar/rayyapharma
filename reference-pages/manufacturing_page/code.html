@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manufacturing - Rayya Pharma Pvt Ltd</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary": "#00346f",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#9bbdff",
+                        "surface": "#f8f9ff",
+                        "on-surface-variant": "#424751",
+                        "surface-container-high": "#dde9ff",
+                        "surface-container-highest": "#d5e3fd",
+                        "inverse-surface": "#233144",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#babcbe",
+                        "surface-tint": "#255dad",
+                        "secondary": "#00677d",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e6eeff",
+                        "primary-container": "#004a99",
+                        "secondary-fixed-dim": "#4cd6fb",
+                        "primary-fixed": "#d7e2ff",
+                        "on-background": "#0d1c2f",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#ccdbf4",
+                        "surface-variant": "#d5e3fd",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c2c6d3",
+                        "inverse-primary": "#abc7ff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#005c70",
+                        "outline": "#737783",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-surface": "#0d1c2f",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "secondary-container": "#50d9fe",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#00458f",
+                        "secondary-fixed": "#b3ebff",
+                        "tertiary": "#323537",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-container": "#494c4e",
+                        "tertiary-fixed": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "button": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Ambient shadow utility as per design system */
+        .ambient-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 52, 111, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md font-['Inter'] antialiased tracking-tight docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm shadow-blue-900/5">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
+<!-- Brand -->
+<div class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white">
+                Rayya Pharma Pvt Ltd
+            </div>
+<!-- Navigation Links (Desktop) -->
+<ul class="hidden md:flex items-center gap-8">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Home</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Products</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Team</a></li>
+<!-- Active Item -->
+<li><a class="text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Manufacturing</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Contact</a></li>
+</ul>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<button class="bg-blue-700 text-white px-5 py-2.5 rounded-lg hover:bg-slate-50 hover:text-blue-700 dark:hover:bg-slate-800/50 transition-all duration-200 font-medium">
+                    Contact Us
+                </button>
+</div>
+<!-- Mobile Menu Toggle (Simplified for visual completeness) -->
+<button class="md:hidden text-slate-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="z-10">
+<span class="font-label-caps text-label-caps text-secondary mb-sm block uppercase tracking-wider">Global Operations</span>
+<h1 class="font-h1 text-h1 text-primary mb-md">Precision engineering for life-saving science.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                        Rayya Pharma Pvt Ltd operates at the intersection of rigorous quality control and state-of-the-art automation. Our global manufacturing network ensures continuous, reliable access to critical therapies.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-secondary to-primary text-on-primary font-button text-button px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            Tour Our Facilities
+                        </button>
+<button class="border-[1.5px] border-primary text-primary font-button text-button px-6 py-3 rounded-lg hover:bg-surface-container-high transition-colors">
+                            Compliance Reports
+                        </button>
+</div>
+</div>
+<div class="relative h-[500px] rounded-xl overflow-hidden ambient-shadow">
+<img alt="Modern pharmaceutical manufacturing facility" class="w-full h-full object-cover" data-alt="clean, bright modern pharmaceutical manufacturing facility with stainless steel bioreactors, pristine white flooring, and soft blue clinical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZdim3aps32pGthcl3IQ655x50M-hXqflRwOwwkOd9zCewuWTZriwwA02o2lwmg6llmFiE2V3XgVhSQH3yOoIEsw3X4rGWWC_Yt_NzFtfapFzbvF1gfgwcg2vCips6FVK8I967uqlaCpSSfQDM8ZYLQJyQzMNglWXinDDNazOA1pD3VBEqzz5OHc9SDIfhbHJ4IQTIDPiejGjjNX2ZzxnhjO4BS9F6UbZvQZZgnLs-1bAMTzkYAd1ncg7pzHWbEFuwJYY2B1TI2KW"/>
+<!-- Subtle gradient overlay to integrate with theme -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+<!-- Metrics Strip (Clinical Data Density) -->
+<section class="bg-surface-container border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-gutter py-lg grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-outline-variant/30">
+<div class="px-sm text-center">
+<p class="font-h2 text-h2 text-primary mb-xs">15+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Global Facilities</p>
+</div>
+<div class="px-sm text-center">
+<p class="font-h2 text-h2 text-primary mb-xs">0</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Critical FDA Findings</p>
+</div>
+<div class="px-sm text-center">
+<p class="font-h2 text-h2 text-primary mb-xs">99.9%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Batch Success Rate</p>
+</div>
+<div class="px-sm text-center">
+<p class="font-h2 text-h2 text-primary mb-xs">24/7</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous Monitoring</p>
+</div>
+</div>
+</section>
+<!-- Core Capabilities Bento Grid -->
+<section class="py-xl px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-lg max-w-2xl mx-auto">
+<h2 class="font-h2 text-h2 text-primary mb-sm">Manufacturing Capabilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Our infrastructure is designed for scalability and uncompromised quality, supporting modalities from small molecules to complex biologics.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+<!-- Large Featured Card -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-8 ambient-shadow hover:border-secondary transition-colors group relative overflow-hidden flex flex-col justify-end">
+<div class="absolute inset-0 z-0">
+<img alt="Laboratory automation" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="close-up of advanced robotic arm handling glass vials in a sterile lab environment with cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOMA0soLjdULcqNE4rK3lA9DKpypkTTzYvnWLzFRF74OZqzbkj-xutidknp8ceXbbSpxJO-DZHGdsN5oJs_NB5ykrPPhJYc5P38g_bF97FLa0O9_w1mueAaHVA58oqlgEQau5ufgHbE4h6y-6lKUEGK-SzE2QU0UAtN_oI-l5wATYlSL-hOy8Ztyeijs6JGS1o4foIhZCA_c0SbnUsYvop3rhjRBY2p-2ruXYzjnPWJ2bJk7g1OAngpyy3nXQ9CAihaV-OkkesqEx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-on-primary">
+<span class="material-symbols-outlined text-[32px] mb-4 text-secondary-container">precision_manufacturing</span>
+<h3 class="font-h3 text-h3 mb-2 text-white">Automated Compounding</h3>
+<p class="font-body-md text-body-md text-surface-container-highest max-w-md">
+                            Industry-leading robotic systems eliminate human error, ensuring absolute precision in active pharmaceutical ingredient (API) handling and formulation.
+                        </p>
+</div>
+</div>
+<!-- Standard Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-6 ambient-shadow hover:border-secondary transition-colors flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<h3 class="font-h3 text-[20px] text-primary">Biologics</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">
+                        State-of-the-art mammalian cell culture facilities equipped with single-use bioreactors for flexible, scalable protein production.
+                    </p>
+</div>
+<!-- Standard Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-6 ambient-shadow hover:border-secondary transition-colors flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<h3 class="font-h3 text-[20px] text-primary">Oral Solid Dosage</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">
+                        High-volume continuous manufacturing lines for tablets and capsules, featuring real-time release testing (RTRT) integration.
+                    </p>
+</div>
+<!-- Horizontal Card -->
+<div class="md:col-span-2 bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-6 ambient-shadow hover:border-secondary transition-colors flex flex-col md:flex-row items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined fill">verified</span>
+</div>
+<div>
+<h3 class="font-h3 text-[20px] text-primary mb-2">Uncompromising Quality Control</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Every batch undergoes hundreds of analytical checks in our centralized QC laboratories, utilizing High-Performance Liquid Chromatography (HPLC) and mass spectrometry to guarantee purity profiles.
+                        </p>
+</div>
+</div>
+<!-- Small Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-6 ambient-shadow hover:border-secondary transition-colors flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-[40px] text-primary mb-3">compost</span>
+<h3 class="font-h3 text-[18px] text-primary mb-2">Sustainable Practices</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Zero-waste-to-landfill initiatives across all tier-1 sites.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Compliance & Regulatory Banner -->
+<section class="bg-surface-container-high py-xl relative">
+<!-- Decorative gradient accent -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-primary to-secondary"></div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-3 gap-lg items-center">
+<div class="lg:col-span-1">
+<h2 class="font-h2 text-h2 text-primary mb-4">Regulatory Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        We don't just meet standards; we help define them. Our facilities are routinely inspected and certified by global health authorities.
+                    </p>
+<button class="flex items-center gap-2 text-secondary font-button text-button hover:text-primary transition-colors">
+                        View Audit History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Regulatory Badges (Simplified UI representation) -->
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center ambient-shadow border border-outline-variant/20">
+<span class="font-h3 text-h3 text-primary block mb-1">FDA</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Approved</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center ambient-shadow border border-outline-variant/20">
+<span class="font-h3 text-h3 text-primary block mb-1">EMA</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Certified</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center ambient-shadow border border-outline-variant/20">
+<span class="font-h3 text-h3 text-primary block mb-1">PMDA</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Compliant</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center ambient-shadow border border-outline-variant/20">
+<span class="font-h3 text-h3 text-primary block mb-1">ISO</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">13485:2016</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm leading-relaxed full-width mt-20 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Brand / Copyright -->
+<div class="md:col-span-1 flex flex-col gap-4">
+<span class="text-lg font-bold text-blue-900 dark:text-slate-100">Rayya Pharma Pvt Ltd</span>
+<p class="text-slate-500 dark:text-slate-500">
+                    © 2024 Rayya Pharma Pvt Ltd. All rights reserved. Precise science, personal care.
+                </p>
+</div>
+<!-- Links list (spanning remaining columns to match generic structure, though JSON doesn't specify exact grouping, it gives a list) -->
+<div class="md:col-span-3 flex flex-wrap gap-x-12 gap-y-4">
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 transition-all hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 transition-all hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" href="#">Terms of Service</a>
+<!-- Active link state technically not defined for footer in context, but styling is provided. Assuming static footer for this render -->
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 transition-all hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" href="#">Global Manufacturing</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 transition-all hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" href="#">Clinical Excellence</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 transition-all hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>

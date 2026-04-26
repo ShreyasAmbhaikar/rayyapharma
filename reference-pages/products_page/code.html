@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | Rayya Pharma Pvt Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary": "#00346f",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#9bbdff",
+                        "surface": "#f8f9ff",
+                        "on-surface-variant": "#424751",
+                        "surface-container-high": "#dde9ff",
+                        "surface-container-highest": "#d5e3fd",
+                        "inverse-surface": "#233144",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#babcbe",
+                        "surface-tint": "#255dad",
+                        "secondary": "#00677d",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e6eeff",
+                        "primary-container": "#004a99",
+                        "secondary-fixed-dim": "#4cd6fb",
+                        "primary-fixed": "#d7e2ff",
+                        "on-background": "#0d1c2f",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#ccdbf4",
+                        "surface-variant": "#d5e3fd",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c2c6d3",
+                        "inverse-primary": "#abc7ff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#005c70",
+                        "outline": "#737783",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-surface": "#0d1c2f",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "secondary-container": "#50d9fe",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#00458f",
+                        "secondary-fixed": "#b3ebff",
+                        "tertiary": "#323537",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-container": "#494c4e",
+                        "tertiary-fixed": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "button": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h2": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+    </style>
+</head>
+<body class="antialiased font-body-md text-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Component -->
+<nav class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm shadow-blue-900/5 font-['Inter'] antialiased tracking-tight">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
+<!-- Brand -->
+<div class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">biotech</span>
+                Rayya Pharma Pvt Ltd
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Home</a>
+<!-- Active Link -->
+<a class="text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Team</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Manufacturing</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Contact</a>
+</div>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<button class="font-button text-button bg-gradient-to-r from-secondary to-primary text-on-primary px-6 py-3 rounded-lg shadow-sm shadow-primary/10 hover:shadow-md transition-all duration-200 hover:opacity-90">
+                    Contact Us
+                </button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-gutter py-xl">
+<!-- Header Section -->
+<section class="mb-xl text-center max-w-3xl mx-auto">
+<h1 class="font-h1 text-h1 text-primary mb-sm">Our Therapeutic Formulations</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Rayya Pharma Pvt Ltd is dedicated to developing high-efficacy treatments across multiple therapeutic areas. Explore our current portfolio of rigorously tested, patient-centric medicinal products.
+            </p>
+</section>
+<!-- Category Filtering -->
+<section class="mb-lg flex flex-wrap justify-center gap-sm">
+<button class="px-6 py-2 rounded-full font-button text-button bg-primary text-on-primary shadow-sm shadow-primary/10 transition-colors">All Products</button>
+<button class="px-6 py-2 rounded-full font-button text-button bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant transition-colors">Tablets</button>
+<button class="px-6 py-2 rounded-full font-button text-button bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant transition-colors">Capsules</button>
+<button class="px-6 py-2 rounded-full font-button text-button bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant transition-colors">Syrups &amp; Liquids</button>
+<button class="px-6 py-2 rounded-full font-button text-button bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant transition-colors">Injectables</button>
+<button class="px-6 py-2 rounded-full font-button text-button bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant transition-colors">Topical</button>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-colors duration-300 hover:border-secondary group shadow-sm shadow-primary/10 flex flex-col">
+<div class="h-48 bg-surface-container-low relative overflow-hidden">
+<img alt="White pharmaceutical tablets spilling from a clear amber prescription bottle onto a clean white clinical surface under bright studio lighting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="White pharmaceutical tablets spilling from a clear amber prescription bottle onto a clean white clinical surface under bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjZykt8be4rvrP7hwSsnkF6bFGAD9Hj6KXzCPFtraCjegGkjGC6LKSxnIPkHA-U_LSEd48LGrotsE17Vbl8vZPXMYTOgdFiwE4eOtUT7o9TPJ1-3ueXVYPuzVfVxBnVblmgE26kWxHy0J7m5Rhz-snAjzD_PqnK0FeXfJfKymSWXxh3M5IebmOnxC83bXxr-cfDtNLoT-5kVQzFkGQRESJSq4i-eju4DWY3LHw6x_2b-iS5gZ5moZWDVHqExJHLbx6RYMaxOuRQFLe"/>
+<div class="absolute top-sm right-sm bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full border border-outline-variant/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">medication</span>
+<span class="font-label-caps text-label-caps text-secondary">Cardiovascular</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="mb-xs flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline tracking-wider">TABLET</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2 group-hover:text-secondary transition-colors">Aterovin-XR</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md flex-grow">
+                        Extended-release formulation designed for the management of hypertension and chronic stable angina. Provides consistent 24-hour therapeutic coverage.
+                    </p>
+<a class="inline-flex items-center justify-between w-full font-button text-button text-secondary border-t border-outline-variant/30 pt-sm mt-auto group-hover:text-primary transition-colors" href="#">
+                        View Clinical Data
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-colors duration-300 hover:border-secondary group shadow-sm shadow-primary/10 flex flex-col">
+<div class="h-48 bg-surface-container-low relative overflow-hidden">
+<img alt="Close up of a gloved hand holding a small glass vial containing clear liquid medication against a blurred laboratory background" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a gloved hand holding a small glass vial containing clear liquid medication against a blurred laboratory background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI-Fk4GxfoR5yqsrccYAKcRR-ZYhXQXzS4EdIfpzrKhXxDqQivO5tsTmlGQ27vtEiJAS9ZUsDlOgzDhKUHLHeuUYa7RY6IUfHQkthaqokdXjfNcZA31UI7RrAI8LPBHhzG5g-djClLADcSCC2potZRMRIwacznelXlc-hePIDHTB-Q5vh09WvgilJI-3iy4RaDgF1NOIVR0NyGZ6HnElzU6QFtSezBH8K35dcS6MLGL0vraEIgRU_nKGJVKuW0fRbzg_EqJqDrc2tH"/>
+<div class="absolute top-sm right-sm bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full border border-outline-variant/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">immunology</span>
+<span class="font-label-caps text-label-caps text-secondary">Immunology</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="mb-xs flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline tracking-wider">INJECTABLE</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2 group-hover:text-secondary transition-colors">Cytomab</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md flex-grow">
+                        Monoclonal antibody therapy indicated for moderate to severe rheumatoid arthritis. Administered subcutaneously for targeted immune modulation.
+                    </p>
+<a class="inline-flex items-center justify-between w-full font-button text-button text-secondary border-t border-outline-variant/30 pt-sm mt-auto group-hover:text-primary transition-colors" href="#">
+                        View Clinical Data
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-colors duration-300 hover:border-secondary group shadow-sm shadow-primary/10 flex flex-col">
+<div class="h-48 bg-surface-container-low relative overflow-hidden">
+<img alt="Macro shot of bright blue and white pharmaceutical capsules resting on a reflective metallic surface in a sterile environment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro shot of bright blue and white pharmaceutical capsules resting on a reflective metallic surface in a sterile environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEw_eROucvSU4F1wrucBbf1PkPC3ZagP2ol_7YOqpcCCHTq2Ye_1fjxcFFFKUBIq9xiW8CzFDXmiGi4GPGt3CmGhDFuByKSPzlZG_1hsOuBOjKAFW-Qtt_o_xleK29DB7VRVVW_9VdwdXhJgTTHs30Zn0A3QZ1OJ20P_WJvj5c4aIfZOfT4qTfcqtsUCjek73h9W5vhUj4g80oMx3Gv995g6a-1F-g2qlDzv3zcYctsjU4CqFeNYdtT3Z9GmTD9xop-Ky8UOEIJlY"/>
+<div class="absolute top-sm right-sm bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full border border-outline-variant/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">neurology</span>
+<span class="font-label-caps text-label-caps text-secondary">Neurology</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="mb-xs flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline tracking-wider">CAPSULE</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2 group-hover:text-secondary transition-colors">Neuroplex-D</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md flex-grow">
+                        Advanced formulation combining neuro-protective agents for the management of peripheral neuropathy and associated neuropathic pain syndromes.
+                    </p>
+<a class="inline-flex items-center justify-between w-full font-button text-button text-secondary border-t border-outline-variant/30 pt-sm mt-auto group-hover:text-primary transition-colors" href="#">
+                        View Clinical Data
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width mt-20 border-t border-slate-200 dark:border-slate-800 flat no shadows font-['Inter'] text-sm leading-relaxed text-blue-800 dark:text-blue-400">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-2">
+<div class="text-lg font-bold text-blue-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">biotech</span>
+                    Rayya Pharma Pvt Ltd
+                </div>
+<p class="text-slate-500 dark:text-slate-500 mt-2 max-w-sm">
+                    © 2024 Rayya Pharma Pvt Ltd. All rights reserved. Precise science, personal care.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="col-span-1 flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-fit" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-fit" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-fit" href="#">Global Manufacturing</a>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1 flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-fit" href="#">Clinical Excellence</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-fit" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>
