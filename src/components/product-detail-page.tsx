@@ -36,9 +36,11 @@ export function ProductDetailPageContent({ product }: ProductDetailPageContentPr
         <div className="grid grid-cols-1 gap-lg lg:grid-cols-12">
           <ProductImageGallery productName={product.name} images={product.detailImages} badge={product.badge} />
 
-          <section className="flex flex-col gap-lg lg:col-span-6">
+          <section className="reveal-up reveal-delay-1 flex flex-col gap-lg lg:col-span-6">
             <div className="flex flex-col gap-xs">
-              <h1 className="font-h1 text-h1 text-primary">{product.name}</h1>
+              <h1 className="font-h1 text-[clamp(1.85rem,7vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.03em] whitespace-nowrap text-primary md:text-h1">
+                {product.name}
+              </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant">{product.genericName}</p>
             </div>
 
@@ -71,10 +73,7 @@ export function ProductDetailPageContent({ product }: ProductDetailPageContentPr
               </h2>
               <div className="space-y-md">
                 {product.supportSections.map((section) => (
-                  <article
-                    key={`${product.slug}-${section.title}`}
-                    className="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-md"
-                  >
+                  <article key={`${product.slug}-${section.title}`} className="reveal-soft rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-md">
                     <h3 className="font-h3 text-xl text-primary">{section.title}</h3>
                     {section.subtitle ? (
                       <p className="mt-1 font-body-sm text-body-sm text-secondary">{section.subtitle}</p>

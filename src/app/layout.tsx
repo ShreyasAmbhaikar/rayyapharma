@@ -6,6 +6,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 import { siteConfig } from '@/content/site';
+import { ScrollReveal } from '@/components/scroll-reveal';
 import { buildAbsoluteUrl, buildOrganizationSchema, buildWebsiteSchema } from '@/lib/seo';
 
 const inter = localFont({
@@ -71,10 +72,7 @@ export const metadata: Metadata = {
     images: [buildAbsoluteUrl(siteConfig.socialImage)],
   },
   icons: {
-    icon: [
-      { url: '/icons/favicon.svg', type: 'image/svg+xml' },
-      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-    ],
+    icon: [{ url: '/icons/favicon.svg', type: 'image/svg+xml' }],
     apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
     shortcut: ['/icons/favicon.svg'],
   },
@@ -102,6 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
+        <ScrollReveal />
         {children}
         {/* <SpeedInsights /> */}
       </body>

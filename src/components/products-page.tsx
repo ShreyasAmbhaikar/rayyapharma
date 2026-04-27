@@ -43,7 +43,7 @@ export function ProductsPageContent() {
           </p>
         </div>
 
-        <section className="mb-xl flex flex-wrap justify-center gap-sm">
+        <section className="mb-lg flex flex-wrap justify-center gap-sm">
           {filterChips.map((filter) => {
             const isActive = filter === activeFilter;
 
@@ -65,9 +65,14 @@ export function ProductsPageContent() {
           })}
         </section>
 
-        <section className="mx-auto grid max-w-[84rem] grid-cols-1 gap-8 overflow-visible pt-3 pb-xl md:grid-cols-2 lg:grid-cols-3">
-          {filteredProducts.map((product) => (
-            <article key={product.name} className="relative h-full overflow-visible">
+        <section className="mx-auto grid max-w-[84rem] grid-cols-1 gap-8 overflow-visible pt-1 pb-xl md:grid-cols-2 lg:grid-cols-3">
+          {filteredProducts.map((product, index) => (
+            <article
+              key={product.name}
+              className={`relative h-full overflow-visible reveal-soft ${
+                index === 0 ? '' : index === 1 ? 'reveal-delay-1' : index === 2 ? 'reveal-delay-2' : 'reveal-delay-3'
+              }`}
+            >
               <Link
                 href={product.href}
                 aria-label={`View details for ${product.name}`}
@@ -84,9 +89,9 @@ export function ProductsPageContent() {
                     />
                   </div>
 
-                  <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-[#9A5FA8] bg-gradient-to-r from-[#FCEFFD] to-[#FFF8FF] px-2.5 py-1 shadow-[0_10px_24px_rgba(90,39,106,0.16)] backdrop-blur-sm transition-all duration-300 group-hover:border-[#80488E] group-hover:shadow-[0_14px_28px_rgba(90,39,106,0.2)]">
-                    <CategoryIcon className="h-3.5 w-3.5 text-[#7E3F8F]" />
-                    <span className="text-[0.95rem] font-semibold text-[#7E3F8F]">{product.category}</span>
+                  <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-[#B776C6] bg-gradient-to-r from-[#FFF6FF] to-[#FFFDFE] px-2 py-0.5 shadow-[0_8px_20px_rgba(90,39,106,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:border-[#9E5AAD] group-hover:shadow-[0_12px_24px_rgba(90,39,106,0.16)]">
+                    <CategoryIcon className="h-3 w-3 text-[#7E3F8F]" />
+                    <span className="text-[0.78rem] font-semibold text-[#7E3F8F]">{product.category}</span>
                   </div>
                 </div>
 
@@ -116,7 +121,7 @@ export function ProductsPageContent() {
         </section>
 
         <section className="mx-auto max-w-5xl pb-xl">
-          <div className="relative overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,255,0.96))] px-6 py-8 shadow-[0_18px_40px_rgba(8,86,147,0.12)] md:px-10">
+          <div className="reveal-up relative overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,255,0.96))] px-6 py-8 shadow-[0_18px_40px_rgba(8,86,147,0.12)] md:px-10">
             <div className="absolute -right-12 top-0 h-32 w-32 rounded-full bg-[radial-gradient(circle,rgba(126,63,143,0.18),rgba(126,63,143,0))]" aria-hidden="true" />
             <div className="absolute -left-10 bottom-0 h-28 w-28 rounded-full bg-[radial-gradient(circle,rgba(8,86,147,0.18),rgba(8,86,147,0))]" aria-hidden="true" />
 

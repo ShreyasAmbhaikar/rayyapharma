@@ -31,8 +31,8 @@ export function TeamPageContent() {
   return (
     <div className="font-body-md text-body-md text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
       <section className="section-shell pb-lg pt-xl text-center">
-        <h1 className="mb-sm font-h1 text-h1 text-primary">Managing Directors</h1>
-        <p className="mx-auto max-w-3xl font-body-lg text-body-lg text-on-surface-variant">
+        <h1 className="mb-sm font-h1 text-h1 text-primary reveal-up">Managing Directors</h1>
+        <p className="mx-auto max-w-3xl font-body-lg text-body-lg text-on-surface-variant reveal-up reveal-delay-1">
           Leading Rayya Pharma&apos;s growth with a focus on trusted product partnerships, strong market relationships,
           and dependable healthcare delivery.
         </p>
@@ -40,10 +40,10 @@ export function TeamPageContent() {
 
       <section className="section-shell pb-xl pt-lg">
         <div className="mx-auto grid max-w-[58rem] grid-cols-1 gap-12 md:grid-cols-2">
-          {leadershipCards.map((member) => (
+          {leadershipCards.map((member, index) => (
             <article
               key={member.name}
-              className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-white shadow-[0_16px_40px_rgba(8,86,147,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[0_24px_54px_rgba(8,86,147,0.14)]"
+              className={`group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-white shadow-[0_16px_40px_rgba(8,86,147,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[0_24px_54px_rgba(8,86,147,0.14)] reveal-soft ${index === 0 ? '' : 'reveal-delay-1'}`}
             >
               <div className="flex flex-grow flex-col items-center gap-4 px-7 py-8 text-center">
                 <div className="relative h-44 w-44 overflow-hidden rounded-full border-[6px] border-[#E8F1FD] bg-surface-container shadow-[0_12px_28px_rgba(8,86,147,0.12)]">

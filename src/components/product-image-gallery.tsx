@@ -34,7 +34,7 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
 
   return (
     <>
-      <section className="flex flex-col gap-md lg:col-span-6">
+      <section className="flex flex-col gap-md lg:col-span-6 reveal-soft">
         <button
           type="button"
           onClick={() => setIsOpen(true)}

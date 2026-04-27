@@ -10,9 +10,9 @@ export function SiteFooter() {
   const companyPhoneHref = siteConfig.companyPlaceholders.contactNumberStatus.replace(/\s+/g, '');
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-50 text-sm leading-relaxed text-blue-800">
+    <footer className="border-t border-slate-200 bg-slate-50 text-sm leading-relaxed text-blue-800 shadow-[0_-8px_24px_rgba(8,86,147,0.05)]">
       <div className="section-shell grid grid-cols-1 gap-8 py-10 md:grid-cols-[1.45fr_0.22fr_0.82fr_1fr]">
-        <div>
+        <div className="reveal-up">
           <Link
             href="/"
             aria-label={`${siteConfig.name} home`}
@@ -21,16 +21,15 @@ export function SiteFooter() {
             <BrandLogo size="footer" subtitle="full" />
           </Link>
           <p className="max-w-md text-slate-500">
-            <span className="block">Focused on bringing trusted pharmaceutical products</span>
-            <span className="block">to healthcare professionals through quality-led sourcing</span>
-            <span className="block">and dependable distribution.</span>
+            Focused on bringing trusted pharmaceutical products to healthcare professionals through quality-led
+            sourcing and dependable distribution.
           </p>
         </div>
 
         <div className="hidden md:block" aria-hidden="true" />
 
-        {siteConfig.footerGroups.map((group) => (
-          <div key={group.title}>
+        {siteConfig.footerGroups.map((group, index) => (
+          <div key={group.title} className={index === 0 ? 'reveal-up reveal-delay-1' : 'reveal-up reveal-delay-2'}>
             <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">{group.title}</h2>
             <ul className="space-y-2.5">
               {group.links.map((link) => (
@@ -47,7 +46,7 @@ export function SiteFooter() {
           </div>
         ))}
 
-        <div className="space-y-6">
+        <div className="space-y-6 reveal-up reveal-delay-2">
           <div>
             <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Registered Office</h2>
             <div className="space-y-2.5 text-slate-500">

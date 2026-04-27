@@ -30,13 +30,13 @@ export function CorporateIdentitySection() {
 
       <div className="section-shell relative z-10">
         <div className="flex flex-col items-start gap-12 md:flex-row">
-          <div className="w-full md:w-1/3">
+          <div className="reveal-up w-full md:w-1/3">
             <h2 className="mb-4 font-h2 text-h2 text-primary">{homeContent.corporate.heading}</h2>
             <p className="mb-6 font-body-md text-body-md text-on-surface-variant">{homeContent.corporate.description}</p>
             <div className="h-1 w-16 rounded-full bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693]" />
           </div>
 
-          <div className="w-full rounded-xl border border-white/40 bg-white/70 p-8 shadow-[0_8px_32px_0_rgba(8,86,147,0.05)] backdrop-blur-xl md:w-2/3">
+          <div className="reveal-soft reveal-delay-1 w-full rounded-xl border border-white/40 bg-white/70 p-8 shadow-[0_8px_32px_0_rgba(8,86,147,0.05)] backdrop-blur-xl md:w-2/3">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
               {corporateFields.map((field) => (
                 <div key={field.label} className="border-b border-outline-variant/30 pb-4">

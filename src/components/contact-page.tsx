@@ -19,7 +19,7 @@ function ContactInfoItem({
       </div>
       <div className="min-w-0 flex-1">
         <h3 className="mb-2 font-label-caps text-label-caps text-secondary">{title}</h3>
-        <p className="font-body-md text-body-md text-on-surface">{value}</p>
+        <p className="break-words font-body-md text-body-md text-on-surface">{value}</p>
       </div>
     </div>
   );
@@ -44,7 +44,7 @@ export function ContactPageContent() {
         </div>
 
         <div className="mx-auto grid max-w-[72rem] grid-cols-1 items-start gap-lg xl:grid-cols-2">
-          <section className="rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
+          <section className="reveal-soft rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
             <h2 className="mb-md font-h3 text-h3 text-primary">Company Contact Details</h2>
             <div className="space-y-md">
               <ContactInfoItem
@@ -54,7 +54,14 @@ export function ContactPageContent() {
               />
               <ContactInfoItem
                 title="Email"
-                value={companyDetails.contactEmailMasked}
+                value={
+                  <a
+                    href={`mailto:${companyDetails.contactEmailMasked}`}
+                    className="break-all rounded-sm underline underline-offset-4 transition-all hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    {companyDetails.contactEmailMasked}
+                  </a>
+                }
                 icon={<MailIcon className="h-5 w-5" />}
               />
               <ContactInfoItem
@@ -72,7 +79,7 @@ export function ContactPageContent() {
             </div>
           </section>
 
-          <section className="rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
+          <section className="reveal-soft reveal-delay-1 rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
             <h2 className="mb-md font-h3 text-h3 text-primary">Find Us</h2>
             <div className="relative h-[320px] overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface-container-high shadow-[0_10px_24px_rgba(8,86,147,0.08)]">
               <iframe

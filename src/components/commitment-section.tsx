@@ -73,23 +73,25 @@ function ValueIcon({ icon, className }: Pick<ValueCard, 'icon'> & { className?: 
 
 export function CommitmentSection() {
   return (
-    <section className="border-b border-outline-variant/30 bg-surface-container-low pt-xl pb-[7rem]">
+    <section className="border-b border-outline-variant/30 bg-surface-container-low pt-xl pb-10 md:pb-[7rem]">
       <div className="section-shell">
         <div className="mx-auto mb-lg max-w-3xl text-center">
           <h2 className="font-h2 text-h2 text-primary">Our Core Values</h2>
         </div>
 
         <div className="mx-auto grid max-w-[74rem] grid-cols-1 gap-8 md:grid-cols-3 md:gap-7 lg:gap-8">
-          {valueCards.map((value) => (
+          {valueCards.map((value, index) => (
             <article
               key={value.title}
-              className="group relative mx-auto flex h-full w-full max-w-[22.75rem] flex-col items-center overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-gradient-to-tl from-[#EEF4FC] via-[#F8FBFF] to-white px-8 py-9 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary md:px-7 lg:px-8 lg:py-10"
+              className={`group relative mx-auto flex h-full w-full max-w-[22.75rem] flex-col items-center overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-gradient-to-tl from-[#EEF4FC] via-[#F8FBFF] to-white px-7 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary md:px-7 md:py-9 lg:px-8 lg:py-10 reveal-soft ${
+                index === 0 ? '' : index === 1 ? 'reveal-delay-1' : 'reveal-delay-2'
+              }`}
             >
               <div className="absolute inset-x-0 top-0 h-[6px] bg-gradient-to-r from-[#8ECD6B] via-[#47B4A1] to-[#2B78B6]" />
-              <div className="mb-6 flex h-[86px] w-[86px] items-center justify-center rounded-full border border-[#DDE8F7] bg-[#F7FAFE] text-primary">
+              <div className="mb-5 flex h-[82px] w-[82px] items-center justify-center rounded-full border border-[#DDE8F7] bg-[#F7FAFE] text-primary md:mb-6 md:h-[86px] md:w-[86px]">
                 <ValueIcon icon={value.icon} className="h-10 w-10" />
               </div>
-              <h3 className="mb-4 font-h3 text-h3 text-primary">{value.title}</h3>
+              <h3 className="mb-3 font-h3 text-h3 text-primary md:mb-4">{value.title}</h3>
               <p className="mx-auto max-w-[16.5rem] font-body-md text-[1.03rem] leading-8 text-on-surface-variant lg:max-w-[17.5rem]">
                 {value.description}
               </p>

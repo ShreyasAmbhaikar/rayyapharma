@@ -75,7 +75,7 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
           </div>
         </form>
 
-        <MobileNav currentPath={currentPath} links={siteConfig.navLinks} contactHref={siteConfig.contactHref} />
+        <MobileNav currentPath={currentPath} links={siteConfig.navLinks} />
       </nav>
     </header>
   );
