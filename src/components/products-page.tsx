@@ -65,7 +65,7 @@ export function ProductsPageContent() {
           })}
         </section>
 
-        <section className="mx-auto grid max-w-[54rem] grid-cols-1 gap-8 overflow-visible pt-3 pb-xl md:grid-cols-2">
+        <section className="mx-auto grid max-w-[84rem] grid-cols-1 gap-8 overflow-visible pt-3 pb-xl md:grid-cols-2 lg:grid-cols-3">
           {filteredProducts.map((product) => (
             <article key={product.name} className="relative h-full overflow-visible">
               <Link
@@ -79,7 +79,7 @@ export function ProductsPageContent() {
                       src={product.imageSrc}
                       alt={product.alt}
                       fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -113,6 +113,34 @@ export function ProductsPageContent() {
               </Link>
             </article>
           ))}
+        </section>
+
+        <section className="mx-auto max-w-5xl pb-xl">
+          <div className="relative overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,255,0.96))] px-6 py-8 shadow-[0_18px_40px_rgba(8,86,147,0.12)] md:px-10">
+            <div className="absolute -right-12 top-0 h-32 w-32 rounded-full bg-[radial-gradient(circle,rgba(126,63,143,0.18),rgba(126,63,143,0))]" aria-hidden="true" />
+            <div className="absolute -left-10 bottom-0 h-28 w-28 rounded-full bg-[radial-gradient(circle,rgba(8,86,147,0.18),rgba(8,86,147,0))]" aria-hidden="true" />
+
+            <div className="relative flex flex-col gap-5 text-center">
+              <div className="mx-auto inline-flex items-center gap-1.5 rounded-full border border-[#9A5FA8] bg-gradient-to-r from-[#FCEFFD] to-[#FFF8FF] px-3 py-1.5 shadow-[0_10px_24px_rgba(90,39,106,0.12)]">
+                <CategoryIcon className="h-4 w-4 text-[#7E3F8F]" />
+                <span className="text-sm font-semibold tracking-[0.04em] text-[#7E3F8F]">Expanding Portfolio</span>
+              </div>
+
+              <div className="mx-auto max-w-2xl">
+                <h2 className="text-[clamp(1.8rem,2.4vw,2.4rem)] font-bold leading-tight text-primary">More Products Coming Soon</h2>
+                <p className="mt-3 font-body-md text-body-md leading-7 text-on-surface-variant">
+                  We are growing the Rayya Pharma portfolio with more focused formulations crafted to support specialized
+                  care needs with the same commitment to quality, precision, and patient-centered innovation.
+                </p>
+              </div>
+
+              <div className="flex justify-center gap-2" aria-hidden="true">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary/75" />
+                <span className="h-2.5 w-2.5 rounded-full bg-secondary/70" />
+                <span className="h-2.5 w-2.5 rounded-full bg-primary/45" />
+              </div>
+            </div>
+          </div>
         </section>
       </section>
     </div>

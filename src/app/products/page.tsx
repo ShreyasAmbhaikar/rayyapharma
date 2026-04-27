@@ -7,7 +7,7 @@ import { buildAbsoluteUrl } from '@/lib/seo';
 
 const title = 'Products | Rayya Pharma Pvt Ltd';
 const description =
-  'Explore trimester-focused prenatal tablet formulations from Rayya Pharma Pvt Ltd, including FETO NURTURE TRI 1 and FETO NURTURE TRI 2.';
+  'Explore trimester-focused prenatal tablet formulations from Rayya Pharma Pvt Ltd, including FETO NURTURE TRI 1, FETO NURTURE TRI 2, and FETO NURTURE TRI 3.';
 
 export const metadata: Metadata = {
   title: {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'pregnancy supplements',
     'FETO NURTURE TRI 1',
     'FETO NURTURE TRI 2',
+    'FETO NURTURE TRI 3',
   ],
   alternates: {
     canonical: buildAbsoluteUrl('/products/'),

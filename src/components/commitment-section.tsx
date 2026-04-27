@@ -73,33 +73,28 @@ function ValueIcon({ icon, className }: Pick<ValueCard, 'icon'> & { className?: 
 
 export function CommitmentSection() {
   return (
-    <section className="border-y border-outline-variant/30 bg-surface-container-low py-xl">
+    <section className="border-b border-outline-variant/30 bg-surface-container-low pt-xl pb-[7rem]">
       <div className="section-shell">
-        <div className="mx-auto mb-xl max-w-3xl text-center">
-          <h2 className="mb-xs font-h2 text-h2 text-primary">Our Core Values</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant">
-            The principles that guide Rayya Pharma Pvt Ltd in its corporate and operational decisions.
-          </p>
+        <div className="mx-auto mb-lg max-w-3xl text-center">
+          <h2 className="font-h2 text-h2 text-primary">Our Core Values</h2>
         </div>
 
-        <div className="rounded-[34px] border border-outline-variant/30 bg-white p-lg">
-          <div className="grid grid-cols-1 gap-lg md:grid-cols-3">
-            {valueCards.map((value) => (
-              <article
-                key={value.title}
-                className="group relative flex flex-col items-center overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-gradient-to-tl from-[#EEF4FC] via-[#F8FBFF] to-white px-6 py-7 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary"
-              >
-                <div className="absolute inset-x-0 top-0 h-[6px] bg-gradient-to-r from-[#8ECD6B] via-[#47B4A1] to-[#2B78B6]" />
-                <div className="mb-md flex h-[76px] w-[76px] items-center justify-center rounded-full border border-[#DDE8F7] bg-[#F7FAFE] text-primary">
-                  <ValueIcon icon={value.icon} className="h-10 w-10" />
-                </div>
-                <h3 className="mb-sm font-h3 text-h3 text-primary">{value.title}</h3>
-                <p className="mx-auto max-w-xs font-body-md text-body-md leading-8 text-on-surface-variant">
-                  {value.description}
-                </p>
-              </article>
-            ))}
-          </div>
+        <div className="mx-auto grid max-w-[74rem] grid-cols-1 gap-8 md:grid-cols-3 md:gap-7 lg:gap-8">
+          {valueCards.map((value) => (
+            <article
+              key={value.title}
+              className="group relative mx-auto flex h-full w-full max-w-[22.75rem] flex-col items-center overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-gradient-to-tl from-[#EEF4FC] via-[#F8FBFF] to-white px-8 py-9 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary md:px-7 lg:px-8 lg:py-10"
+            >
+              <div className="absolute inset-x-0 top-0 h-[6px] bg-gradient-to-r from-[#8ECD6B] via-[#47B4A1] to-[#2B78B6]" />
+              <div className="mb-6 flex h-[86px] w-[86px] items-center justify-center rounded-full border border-[#DDE8F7] bg-[#F7FAFE] text-primary">
+                <ValueIcon icon={value.icon} className="h-10 w-10" />
+              </div>
+              <h3 className="mb-4 font-h3 text-h3 text-primary">{value.title}</h3>
+              <p className="mx-auto max-w-[16.5rem] font-body-md text-[1.03rem] leading-8 text-on-surface-variant lg:max-w-[17.5rem]">
+                {value.description}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

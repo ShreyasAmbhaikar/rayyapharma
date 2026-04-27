@@ -33,7 +33,7 @@ export function CorporateIdentitySection() {
           <div className="w-full md:w-1/3">
             <h2 className="mb-4 font-h2 text-h2 text-primary">{homeContent.corporate.heading}</h2>
             <p className="mb-6 font-body-md text-body-md text-on-surface-variant">{homeContent.corporate.description}</p>
-            <div className="h-1 w-16 rounded-full bg-brand-gradient" />
+            <div className="h-1 w-16 rounded-full bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693]" />
           </div>
 
           <div className="w-full rounded-xl border border-white/40 bg-white/70 p-8 shadow-[0_8px_32px_0_rgba(8,86,147,0.05)] backdrop-blur-xl md:w-2/3">

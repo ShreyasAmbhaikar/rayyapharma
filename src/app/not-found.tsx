@@ -18,20 +18,29 @@ export default function NotFound() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-10">
             <Image
-              src="/images/transparent 404 image.webp"
+              src="/images/404-no-bg.webp"
               alt="404 illustration"
               width={1200}
               height={900}
               priority
-              className="mx-auto h-auto w-full max-w-[720px]"
+              className="mx-auto h-auto w-full max-w-[540px] md:max-w-[600px]"
             />
           </div>
+          <p className="mb-8 text-lg font-semibold text-primary md:text-xl">
+            Sorry, we couldn&apos;t find what you were looking for.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/" className="primary-button">
-              Return Home
+            <Link
+              href="/products/"
+              className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693] px-6 py-3 font-button text-button text-on-primary shadow-[0_10px_24px_-6px_rgba(8,86,147,0.42)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-8px_rgba(8,86,147,0.48)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Return to Products
             </Link>
-            <Link href="/contact/" className="secondary-button">
-              Visit Contact
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[var(--primary-border)] bg-white/70 px-6 py-3 font-button text-button text-primary transition-colors duration-200 hover:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Return Home
             </Link>
           </div>
         </div>

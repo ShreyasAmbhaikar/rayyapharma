@@ -54,16 +54,16 @@ export const products: ProductRecord[] = [
     badge: 'Pregnancy Supplement',
     description:
       'Prenatal nutrition tablet designed for pre-conception and first-trimester support, with folate, choline, DHA, B-complex vitamins, trace minerals, and anti-nausea nutritional support.',
-    imageSrc: '/images/products/feto-nurture-tri-1-product-image.webp',
-    alt: 'Product image of FETO NURTURE TRI 1 carton pack shown against a warm yellow background.',
+    imageSrc: '/images/products/feto-nurture-tri-1.webp',
+    alt: 'Pack-shot photo of FETO NURTURE TRI 1 showing the product carton, leaflet, and blister strip.',
     detailImages: [
-      {
-        src: '/images/products/feto-nurture-tri-1-product-image.webp',
-        alt: 'Product image of FETO NURTURE TRI 1 carton pack shown against a warm yellow background.',
-      },
       {
         src: '/images/products/feto-nurture-tri-1.webp',
         alt: 'Pack-shot photo of FETO NURTURE TRI 1 showing the product carton, leaflet, and blister strip.',
+      },
+      {
+        src: '/images/products/feto-nurture-tri-1-box.webp',
+        alt: 'Box photo of FETO NURTURE TRI 1 showing the carton pack design.',
       },
     ],
     href: buildProductHref('feto-nurture-tri-1'),
@@ -158,6 +158,10 @@ export const products: ProductRecord[] = [
         src: '/images/products/feto-nurture-tri-2.webp',
         alt: 'Pack-shot photo of FETO NURTURE TRI 2 showing the product carton, leaflet, and blister strip.',
       },
+      {
+        src: '/images/products/feto-nurture-tri-2-box.webp',
+        alt: 'Box photo of FETO NURTURE TRI 2 showing the carton pack design.',
+      },
     ],
     href: buildProductHref('feto-nurture-tri-2'),
     icon: 'prenatal',
@@ -229,6 +233,110 @@ export const products: ProductRecord[] = [
       'prenatal calcium DHA supplement',
       'pregnancy evening dose tablet',
       'maternal bone and brain support',
+    ],
+  },
+  {
+    slug: 'feto-nurture-tri-3',
+    name: 'FETO NURTURE TRI 3',
+    category: 'Prenatal Nutrition',
+    type: 'TABLET',
+    badge: 'Morning Dose',
+    description:
+      'Third-trimester prenatal tablet for weeks 28-40 with time-release iron, choline, calcium, vitamin D, folic acid, iodine, zinc, selenium, and B-complex support for maternal stamina and final fetal growth.',
+    imageSrc: '/images/products/feto-nurture-tri-3.webp',
+    alt: 'Pack-shot photo of FETO NURTURE TRI 3 showing the product carton, leaflet, and blister strip.',
+    detailImages: [
+      {
+        src: '/images/products/feto-nurture-tri-3.webp',
+        alt: 'Pack-shot photo of FETO NURTURE TRI 3 showing the product carton, leaflet, and blister strip.',
+      },
+      {
+        src: '/images/products/feto-nurture-tri-3-box.webp',
+        alt: 'Box photo of FETO NURTURE TRI 3 showing the carton pack design.',
+      },
+    ],
+    href: buildProductHref('feto-nurture-tri-3'),
+    icon: 'prenatal',
+    genericName: 'Pregnancy Supplement, 3rd Trimester - Morning Dose',
+    therapeuticClass: 'Prenatal Nutraceutical',
+    dosageForm: 'Tablet',
+    availableStrengths: '10 x 1 x 10 tablets',
+    administration: 'Oral, morning dose during weeks 28-40 as advised',
+    overview:
+      'FETO NURTURE TRI 3 is the morning nutrition essential for optimal fetal development and maternal health during the third trimester. It is designed for weeks 28-40, when fetal weight gain accelerates, iron demands peak, and nutritional needs expand to support immunity, bone development, and maternal wellness.',
+    importantNote:
+      'Marketed by Rayya Pharma Pvt. Ltd. Nutritional supplements should be taken under medical supervision.',
+    supportRows: [
+      {
+        focus: 'Peak fetal growth support',
+        rationale:
+          'The third trimester is the phase of most rapid fetal weight gain, so the formula emphasizes final growth, cognition, and skeletal support.',
+      },
+      {
+        focus: 'Iron and stamina support',
+        rationale:
+          'Time-release iron and a B-vitamin complex help maintain hemoglobin, oxygen delivery, daily energy, and maternal resilience when iron needs are highest.',
+      },
+      {
+        focus: 'Brain, bone, and metabolic nutrition',
+        rationale:
+          'Choline, calcium, manganese, vitamin D, folic acid, and iodine support fetal brain development, skeletal strength, DNA synthesis, and healthy thyroid function.',
+      },
+      {
+        focus: 'Immune and antioxidant defense',
+        rationale:
+          'Vitamin C, zinc, and selenium help support immunity, iron absorption, cellular growth, and protection against oxidative stress late in pregnancy.',
+      },
+    ],
+    supportSections: [
+      {
+        title: 'I. Why Focus on the 3rd Trimester',
+        subtitle: '3rd Trimester Support (28-40 Weeks)',
+        bullets: [
+          'Peak fetal growth: The baby’s weight increases most rapidly during this phase.',
+          'Iron demands spike: Iron requirements are at their highest to help prevent anemia, a key risk factor for late-pregnancy complications.',
+          'Nutritional needs evolve: Maternal needs increase for immune support, calcium, and nutritional cofactors that support final fetal growth and overall wellness.',
+        ],
+      },
+      {
+        title: 'II. Iron and Stamina Boosters',
+        bullets: [
+          'Iron (Time Release): Provides a gentle, ongoing release of 35 mg+ elemental iron to help prevent pregnancy anemia associated with low birth weight and preterm birth risk.',
+          'B-Vitamin Complex (B1, B2, B3, B5, B6): Enhances oxygen delivery to support energy levels, reduce fatigue, and promote growth.',
+          'Gentle, non-constipating formula: Designed to support compliance with minimal gastrointestinal distress during the final phase of pregnancy.',
+        ],
+      },
+      {
+        title: 'III. Fetal Brain, Bone, and Nutritional Support',
+        bullets: [
+          'Choline: Essential for fetal brain function, memory development, and healthy birth weight support.',
+          'Calcium, manganese, and vitamin D: Support baby’s skeletal development and strength while helping maintain maternal bone health.',
+          'Folic acid and iodine: Critical for DNA synthesis, neural tube support, healthy thyroid activity, and maternal metabolism.',
+        ],
+      },
+      {
+        title: 'IV. Immune and Antioxidant Defense',
+        bullets: [
+          'Vitamin C: Supports immunity and significantly improves iron absorption from the tablet.',
+          'Zinc and selenium: Vital minerals that aid cellular growth, DNA synthesis, and support against late-pregnancy complications.',
+          'Antioxidant support: Selenium helps shield against oxidative stress, supporting both maternal and fetal health.',
+        ],
+      },
+      {
+        title: 'V. Why Choose FETO NURTURE TRI 3',
+        bullets: [
+          'Complete, once-daily morning dose for 28-40 week nutritional needs.',
+          'Trimester-specific, gentle formula with time-release iron.',
+          '100% vegetarian and carefully crafted for the final phase of pregnancy.',
+        ],
+      },
+    ],
+    keywords: [
+      'FETO NURTURE TRI 3',
+      'third trimester tablet',
+      'pregnancy morning dose tablet',
+      'time-release iron prenatal supplement',
+      '28 to 40 weeks pregnancy support',
     ],
   },
 ];
