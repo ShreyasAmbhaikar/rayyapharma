@@ -83,12 +83,12 @@ export function CommitmentSection() {
           {valueCards.map((value, index) => (
             <article
               key={value.title}
-              className={`group relative mx-auto flex h-full w-full max-w-[22.75rem] flex-col items-center overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-gradient-to-tl from-[#EEF4FC] via-[#F8FBFF] to-white px-7 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary md:px-7 md:py-9 lg:px-8 lg:py-10 reveal-soft ${
+              className={`group relative mx-auto flex h-full w-full max-w-[22.75rem] flex-col items-center overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-value-card-gradient px-7 py-8 text-center shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-primary md:px-7 md:py-9 lg:px-8 lg:py-10 reveal-soft ${
                 index === 0 ? '' : index === 1 ? 'reveal-delay-1' : 'reveal-delay-2'
               }`}
             >
-              <div className="absolute inset-x-0 top-0 h-[6px] bg-gradient-to-r from-[#8ECD6B] via-[#47B4A1] to-[#2B78B6]" />
-              <div className="mb-5 flex h-[82px] w-[82px] items-center justify-center rounded-full border border-[#DDE8F7] bg-[#F7FAFE] text-primary md:mb-6 md:h-[86px] md:w-[86px]">
+              <div className="absolute inset-x-0 top-0 h-[6px] bg-brand-gradient" />
+              <div className="mb-5 flex h-[82px] w-[82px] items-center justify-center rounded-full border border-outline-variant/50 bg-surface-container-lowest text-primary md:mb-6 md:h-[86px] md:w-[86px]">
                 <ValueIcon icon={value.icon} className="h-10 w-10" />
               </div>
               <h3 className="mb-3 font-h3 text-h3 text-primary md:mb-4">{value.title}</h3>

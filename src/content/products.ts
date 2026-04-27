@@ -344,3 +344,67 @@ export const products: ProductRecord[] = [
 export function getProductBySlug(slug: string) {
   return products.find((product) => product.slug === slug);
 }
+
+function normalizeProductSearchValue(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+function buildProductSearchHaystack(product: ProductRecord) {
+  return normalizeProductSearchValue(
+    [
+      product.name,
+      product.slug,
+      product.category,
+      product.genericName,
+      product.description,
+      product.therapeuticClass,
+      ...product.keywords,
+    ].join(' '),
+  );
+}
+
+export function findProductByQuery(query: string) {
+  const normalizedQuery = normalizeProductSearchValue(query);
+
+  if (!normalizedQuery) {
+    return undefined;
+  }
+
+  const queryTokens = normalizedQuery.split(' ');
+  let bestMatch: ProductRecord | undefined;
+  let bestScore = 0;
+
+  for (const product of products) {
+    const normalizedName = normalizeProductSearchValue(product.name);
+    const normalizedSlug = normalizeProductSearchValue(product.slug);
+    const haystack = buildProductSearchHaystack(product);
+    let score = 0;
+
+    if (normalizedName === normalizedQuery) {
+      score = 140;
+    } else if (normalizedSlug === normalizedQuery) {
+      score = 135;
+    } else if (normalizedQuery.includes(normalizedName)) {
+      score = 125;
+    } else if (haystack.includes(normalizedQuery)) {
+      score = 100;
+    }
+
+    const matchedTokens = queryTokens.filter((token) => haystack.includes(token));
+
+    if (matchedTokens.length === queryTokens.length) {
+      score = Math.max(score, 80 + matchedTokens.length * 4);
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = product;
+    }
+  }
+
+  return bestScore >= 80 ? bestMatch : undefined;
+}

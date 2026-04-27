@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { siteConfig } from '@/content/site';
 
 import { BrandLogo } from '@/components/brand-logo';
-import { SearchIcon } from '@/components/icons';
 import { MobileNav } from '@/components/mobile-nav';
+import { ProductSearchForm } from '@/components/product-search-form';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 type SiteHeaderProps = {
   currentPath: string;
@@ -20,7 +21,7 @@ function isActiveLink(linkHref: string, currentPath: string) {
 
 export function SiteHeader({ currentPath }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 shadow-nav backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-outline-variant/55 bg-surface-container-lowest/90 shadow-nav backdrop-blur-md">
       <nav className="section-shell relative flex h-[76px] items-center justify-between" aria-label="Primary">
         <Link
           href="/"
@@ -41,7 +42,7 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
                 className={`border-b-2 pb-1 text-sm font-semibold transition-colors ${
                   isActive
                     ? 'border-primary text-primary'
-                    : 'border-transparent text-slate-600 hover:text-primary'
+                    : 'border-transparent text-on-surface-variant hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -50,32 +51,21 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
           })}
         </div>
 
-        <form
-          action="/products/"
-          method="get"
-          className="hidden md:flex md:w-[320px] md:shrink-0"
-          role="search"
-          aria-label="Search products"
-        >
-          <div className="flex w-full items-center rounded-full border border-secondary/20 bg-white/85 p-1 shadow-[0_10px_30px_rgba(8,86,147,0.08)] backdrop-blur-sm transition-shadow focus-within:shadow-[0_14px_36px_rgba(8,86,147,0.14)]">
-            <input
-              type="search"
-              name="query"
-              placeholder="Search products"
-              className="h-9 flex-1 bg-transparent px-4 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none"
-              aria-label="Search products"
-            />
-            <button
-              type="submit"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693] text-white shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              aria-label="Search"
-            >
-              <SearchIcon className="h-5 w-5" />
-            </button>
-          </div>
-        </form>
+        <div className="hidden items-center gap-3 md:flex">
+          <ProductSearchForm
+            formClassName="w-[260px] shrink-0 lg:w-[320px]"
+            shellClassName="flex w-full items-center rounded-full border border-secondary/20 bg-surface-container-lowest/85 p-1 shadow-[var(--shadow-search)] backdrop-blur-sm transition-shadow focus-within:shadow-[var(--shadow-search-focus)]"
+            inputClassName="h-9 flex-1 bg-transparent px-4 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none"
+            buttonClassName="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-on-primary shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          />
 
-        <MobileNav currentPath={currentPath} links={siteConfig.navLinks} />
+          <ThemeToggle showLabel />
+        </div>
+
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle className="px-1.5" />
+          <MobileNav currentPath={currentPath} links={siteConfig.navLinks} />
+        </div>
       </nav>
     </header>
   );

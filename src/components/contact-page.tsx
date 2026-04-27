@@ -13,7 +13,7 @@ function ContactInfoItem({
   icon: ReactNode;
 }) {
   return (
-    <div className="group flex min-h-[112px] items-start gap-md rounded-2xl border border-outline-variant/30 bg-white/80 p-5 shadow-[0_10px_30px_rgba(8,86,147,0.06)] backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(8,86,147,0.1)]">
+    <div className="group flex min-h-[112px] items-start gap-md rounded-2xl border border-outline-variant/30 bg-surface-container-lowest/80 p-5 shadow-[var(--shadow-search)] backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-panel)]">
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/15 via-primary/10 to-secondary/20 text-primary shadow-inner">
         {icon}
       </div>
@@ -44,7 +44,7 @@ export function ContactPageContent() {
         </div>
 
         <div className="mx-auto grid max-w-[72rem] grid-cols-1 items-start gap-lg xl:grid-cols-2">
-          <section className="reveal-soft rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
+          <section className="reveal-soft rounded-[28px] border border-outline-variant/30 bg-card-gradient p-md shadow-[var(--shadow-panel)]">
             <h2 className="mb-md font-h3 text-h3 text-primary">Company Contact Details</h2>
             <div className="space-y-md">
               <ContactInfoItem
@@ -79,9 +79,9 @@ export function ContactPageContent() {
             </div>
           </section>
 
-          <section className="reveal-soft reveal-delay-1 rounded-[28px] border border-outline-variant/30 bg-gradient-to-br from-white via-surface to-surface-container-low p-md shadow-[0_16px_50px_rgba(8,86,147,0.08)]">
+          <section className="reveal-soft reveal-delay-1 rounded-[28px] border border-outline-variant/30 bg-card-gradient p-md shadow-[var(--shadow-panel)]">
             <h2 className="mb-md font-h3 text-h3 text-primary">Find Us</h2>
-            <div className="relative h-[320px] overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface-container-high shadow-[0_10px_24px_rgba(8,86,147,0.08)]">
+            <div className="relative h-[320px] overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface-container-high shadow-[var(--shadow-search)]">
               <iframe
                 title="Google Maps location for Rayya Pharma Private Limited"
                 src={googleMapsEmbedSrc}

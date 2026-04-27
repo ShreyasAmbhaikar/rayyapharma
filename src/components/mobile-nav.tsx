@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react';
 
 import type { LinkItem } from '@/content/site';
 
-import { CloseIcon, MenuIcon, SearchIcon } from '@/components/icons';
+import { CloseIcon, MenuIcon } from '@/components/icons';
+import { ProductSearchForm } from '@/components/product-search-form';
 
 type MobileNavProps = {
   currentPath: string;
@@ -47,7 +48,7 @@ export function MobileNav({ currentPath, links }: MobileNavProps) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="relative z-[70] inline-flex h-11 w-11 items-center justify-center rounded-lg border border-primary/10 bg-white/80 text-primary transition-colors hover:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        className="relative z-[70] inline-flex h-11 w-11 items-center justify-center rounded-lg border border-primary/10 bg-surface-container-lowest/80 text-primary transition-colors hover:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         aria-expanded={isOpen}
         aria-controls="mobile-nav-panel"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -56,19 +57,28 @@ export function MobileNav({ currentPath, links }: MobileNavProps) {
       </button>
 
       {isOpen ? (
-        <div className="fixed inset-0 z-[60] md:hidden">
-          <button
-            type="button"
-            aria-label="Close menu overlay"
-            onClick={() => setIsOpen(false)}
-            className="reveal-fade absolute inset-0 bg-slate-950/18 backdrop-blur-[2px]"
-          />
-
-          <div className="section-shell relative z-10 pt-[88px]">
+        <div className="fixed inset-0 z-[60] md:hidden" onClick={() => setIsOpen(false)}>
+          <div className="section-shell relative pt-[88px]">
             <div
               id="mobile-nav-panel"
-              className="reveal-soft rounded-2xl border border-outline-variant/60 bg-white/95 p-5 shadow-lift backdrop-blur-xl"
+              onClick={(event) => event.stopPropagation()}
+              className="reveal-soft rounded-2xl border border-outline-variant/60 bg-surface-container-lowest/95 p-5 shadow-lift"
             >
+              <div className="mb-4 flex items-center justify-between">
+                <p className="text-sm font-semibold uppercase tracking-[0.08em] text-on-surface-variant">
+                  Menu
+                </p>
+
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-surface-container-low text-primary transition-colors hover:bg-surface-container-high focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  aria-label="Close menu"
+                >
+                  <CloseIcon className="h-5 w-5" />
+                </button>
+              </div>
+
               <div className="flex flex-col gap-3">
                 {links.map((link) => {
                   const href = normalizePath(link.href);
@@ -89,31 +99,13 @@ export function MobileNav({ currentPath, links }: MobileNavProps) {
                 })}
               </div>
 
-              <form
-                action="/products/"
-                method="get"
-                role="search"
-                aria-label="Search products"
-                onSubmit={() => setIsOpen(false)}
-                className="mt-4"
-              >
-                <div className="flex w-full items-center rounded-full border border-secondary/20 bg-white/90 p-1 shadow-[0_10px_30px_rgba(8,86,147,0.08)] backdrop-blur-sm transition-shadow focus-within:shadow-[0_14px_36px_rgba(8,86,147,0.14)]">
-                  <input
-                    type="search"
-                    name="query"
-                    placeholder="Search products"
-                    className="h-10 flex-1 bg-transparent px-4 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none"
-                    aria-label="Search products"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693] text-white shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                    aria-label="Search"
-                  >
-                    <SearchIcon className="h-5 w-5" />
-                  </button>
-                </div>
-              </form>
+              <ProductSearchForm
+                formClassName="mt-4"
+                onNavigate={() => setIsOpen(false)}
+                shellClassName="flex w-full items-center overflow-hidden rounded-full border border-secondary/20 bg-surface-container-lowest/88 p-1 shadow-[var(--shadow-search)] backdrop-blur-md transition-shadow focus-within:shadow-[var(--shadow-search-focus)]"
+                inputClassName="h-10 flex-1 bg-transparent px-4 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none"
+                buttonClassName="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-on-primary shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              />
             </div>
           </div>
         </div>

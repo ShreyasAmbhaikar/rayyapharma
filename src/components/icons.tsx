@@ -21,6 +21,34 @@ export function CloseIcon(props: IconProps) {
   );
 }
 
+export function SunIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2.8v2.3" strokeLinecap="round" />
+      <path d="M12 18.9v2.3" strokeLinecap="round" />
+      <path d="M4.1 4.1 5.7 5.7" strokeLinecap="round" />
+      <path d="m18.3 18.3 1.6 1.6" strokeLinecap="round" />
+      <path d="M2.8 12h2.3" strokeLinecap="round" />
+      <path d="M18.9 12h2.3" strokeLinecap="round" />
+      <path d="m4.1 19.9 1.6-1.6" strokeLinecap="round" />
+      <path d="m18.3 5.7 1.6-1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function MoonIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path
+        d="M20 14.6A7.8 7.8 0 0 1 9.4 4a8.1 8.1 0 1 0 10.6 10.6Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function ArrowRightIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" {...props}>

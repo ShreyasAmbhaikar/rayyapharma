@@ -11,19 +11,19 @@ type LeadershipCard = {
 const leadershipCards: LeadershipCard[] = [
   {
     role: 'Managing Director',
-    name: 'Poonam Devidas Karale',
+    name: 'Dr. Poonam Devidas Karale',
     description:
-      "Poonam guides the strategic direction of Rayya Pharma Pvt Ltd, supporting growth planning, partner relationships, and the company's long-term business vision.",
+      "Dr. Poonam guides the strategic direction of Rayya Pharma Pvt Ltd, supporting growth planning, partner relationships, and the company's long-term business vision.",
     imageSrc: '/images/team/alicia-montgomery.webp',
-    alt: 'Representative portrait used for the managing director profile of Poonam Devidas Karale.',
+    alt: 'Representative portrait used for the managing director profile of Dr. Poonam Devidas Karale.',
   },
   {
     role: 'Managing Director',
-    name: 'Nikita Devidas Karale',
+    name: 'Dr. Nikita Devidas Karale',
     description:
-      'Nikita contributes to operations, coordination, and organizational development at Rayya Pharma Pvt Ltd, with a focus on steady execution and responsible expansion.',
+      'Dr. Nikita contributes to operations, coordination, and organizational development at Rayya Pharma Pvt Ltd, with a focus on steady execution and responsible expansion.',
     imageSrc: '/images/team/maria-gonzalez.webp',
-    alt: 'Representative portrait used for the managing director profile of Nikita Devidas Karale.',
+    alt: 'Representative portrait used for the managing director profile of Dr. Nikita Devidas Karale.',
   },
 ];
 
@@ -43,10 +43,10 @@ export function TeamPageContent() {
           {leadershipCards.map((member, index) => (
             <article
               key={member.name}
-              className={`group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#CFE0F6] bg-white shadow-[0_16px_40px_rgba(8,86,147,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[0_24px_54px_rgba(8,86,147,0.14)] reveal-soft ${index === 0 ? '' : 'reveal-delay-1'}`}
+              className={`group flex h-full flex-col overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-card-gradient shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[var(--shadow-card-hover)] reveal-soft ${index === 0 ? '' : 'reveal-delay-1'}`}
             >
               <div className="flex flex-grow flex-col items-center gap-4 px-7 py-8 text-center">
-                <div className="relative h-44 w-44 overflow-hidden rounded-full border-[6px] border-[#E8F1FD] bg-surface-container shadow-[0_12px_28px_rgba(8,86,147,0.12)]">
+                <div className="relative h-44 w-44 overflow-hidden rounded-full border-[6px] border-outline-variant/50 bg-surface-container shadow-[var(--shadow-search)]">
                   <Image
                     src={member.imageSrc}
                     alt={member.alt}

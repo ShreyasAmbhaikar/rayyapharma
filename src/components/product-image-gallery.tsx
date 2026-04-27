@@ -93,13 +93,13 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
           aria-label={`${productName} image viewer`}
         >
           <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-white p-3 shadow-2xl"
+            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-surface-container-lowest p-3 shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-slate-950/85 text-xl font-semibold text-white transition-colors hover:bg-slate-800"
+              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-inverse-surface/85 text-xl font-semibold text-inverse-on-surface transition-colors hover:bg-inverse-surface"
               aria-label="Close image viewer"
             >
               ×

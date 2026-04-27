@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 import { siteConfig } from '@/content/site';
+import { themeColors } from '@/lib/theme';
 
 export const dynamic = 'force-static';
 
@@ -12,7 +13,7 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: '/',
     display: 'standalone',
     background_color: '#f8f9ff',
-    theme_color: '#085693',
+    theme_color: themeColors.light,
     icons: [
       {
         src: '/icons/favicon.svg',

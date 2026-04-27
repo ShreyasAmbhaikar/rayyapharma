@@ -14,7 +14,7 @@
   html {
     overflow-x: hidden;
     scrollbar-width: thin;
-    scrollbar-color: #3f86c6 #edf4ff;
+    scrollbar-color: var(--primary) var(--surface-container-low);
   }
 
   body {
@@ -29,21 +29,21 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%);
+    background: var(--scrollbar-track);
   }
 
   *::-webkit-scrollbar-thumb {
-    border: 3px solid #f8fbff;
+    border: 3px solid var(--surface-container-lowest);
     border-radius: 999px;
-    background: linear-gradient(180deg, #5a9cd6 0%, #3f86c6 100%);
+    background: var(--scrollbar-thumb);
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #4c90cd 0%, #3277b7 100%);
+    background: var(--scrollbar-thumb-hover);
   }
 
   *::-webkit-scrollbar-corner {
-    background: #edf4ff;
+    background: var(--surface-container-low);
   }
 }
 

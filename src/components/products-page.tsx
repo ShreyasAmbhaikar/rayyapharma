@@ -55,7 +55,7 @@ export function ProductsPageContent() {
                 onClick={() => setActiveFilter(filter)}
                 className={`rounded-full px-6 py-2 font-button text-button transition-colors ${
                   isActive
-                    ? 'bg-primary text-white shadow-[0_10px_24px_rgba(8,86,147,0.14)] hover:bg-[var(--primary-hover)]'
+                    ? 'bg-primary text-on-primary shadow-[0_10px_24px_rgba(8,86,147,0.14)] hover:bg-[var(--primary-hover)]'
                     : 'border border-outline-variant bg-surface-container text-on-surface-variant hover:bg-surface-container-high'
                 }`}
               >
@@ -76,10 +76,10 @@ export function ProductsPageContent() {
               <Link
                 href={product.href}
                 aria-label={`View details for ${product.name}`}
-                className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-[22px] border border-[var(--primary-border)] bg-white px-3 pb-5 pt-3 shadow-[0_16px_34px_rgba(8,86,147,0.1)] transition-all duration-300 hover:z-20 hover:animate-card-bounce-up hover:border-primary hover:shadow-[0_22px_42px_rgba(8,86,147,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-[22px] border border-[var(--primary-border)] bg-card-gradient px-3 pb-5 pt-3 shadow-[var(--shadow-card)] transition-all duration-300 hover:z-20 hover:animate-card-bounce-up hover:border-primary hover:shadow-[var(--shadow-card-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 <div className="relative overflow-hidden rounded-[18px]">
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-[18px] bg-white">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-[18px] bg-surface-container-lowest">
                     <Image
                       src={product.imageSrc}
                       alt={product.alt}
@@ -89,9 +89,9 @@ export function ProductsPageContent() {
                     />
                   </div>
 
-                  <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-[#B776C6] bg-gradient-to-r from-[#FFF6FF] to-[#FFFDFE] px-2 py-0.5 shadow-[0_8px_20px_rgba(90,39,106,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:border-[#9E5AAD] group-hover:shadow-[0_12px_24px_rgba(90,39,106,0.16)]">
-                    <CategoryIcon className="h-3 w-3 text-[#7E3F8F]" />
-                    <span className="text-[0.78rem] font-semibold text-[#7E3F8F]">{product.category}</span>
+                  <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-[var(--category-pill-border)] bg-category-pill-gradient px-2 py-0.5 shadow-[0_8px_20px_rgba(90,39,106,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_12px_24px_rgba(90,39,106,0.16)]">
+                    <CategoryIcon className="h-3 w-3 text-[var(--category-pill-text)]" />
+                    <span className="text-[0.78rem] font-semibold text-[var(--category-pill-text)]">{product.category}</span>
                   </div>
                 </div>
 
@@ -109,7 +109,7 @@ export function ProductsPageContent() {
                       <span className="text-xs text-on-surface-variant">{product.availableStrengths}</span>
                     </div>
 
-                    <span className="inline-flex flex-none items-center gap-2 rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-all duration-300 group-hover:border-[var(--primary-hover)] group-hover:bg-[var(--primary-hover)]">
+                    <span className="inline-flex flex-none items-center gap-2 rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition-all duration-300 group-hover:border-[var(--primary-hover)] group-hover:bg-[var(--primary-hover)]">
                       <span>View Details</span>
                       <ArrowRightIcon className="h-4 w-4" />
                     </span>
@@ -121,14 +121,14 @@ export function ProductsPageContent() {
         </section>
 
         <section className="mx-auto max-w-5xl pb-xl">
-          <div className="reveal-up relative overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,255,0.96))] px-6 py-8 shadow-[0_18px_40px_rgba(8,86,147,0.12)] md:px-10">
-            <div className="absolute -right-12 top-0 h-32 w-32 rounded-full bg-[radial-gradient(circle,rgba(126,63,143,0.18),rgba(126,63,143,0))]" aria-hidden="true" />
-            <div className="absolute -left-10 bottom-0 h-28 w-28 rounded-full bg-[radial-gradient(circle,rgba(8,86,147,0.18),rgba(8,86,147,0))]" aria-hidden="true" />
+          <div className="reveal-up relative overflow-hidden rounded-[28px] border border-[var(--primary-border)] bg-notice-panel-gradient px-6 py-8 shadow-[var(--shadow-panel)] md:px-10">
+            <div className="absolute -right-12 top-0 h-32 w-32 rounded-full [background:var(--category-orb)]" aria-hidden="true" />
+            <div className="absolute -left-10 bottom-0 h-28 w-28 rounded-full [background:var(--primary-orb)]" aria-hidden="true" />
 
             <div className="relative flex flex-col gap-5 text-center">
-              <div className="mx-auto inline-flex items-center gap-1.5 rounded-full border border-[#9A5FA8] bg-gradient-to-r from-[#FCEFFD] to-[#FFF8FF] px-3 py-1.5 shadow-[0_10px_24px_rgba(90,39,106,0.12)]">
-                <CategoryIcon className="h-4 w-4 text-[#7E3F8F]" />
-                <span className="text-sm font-semibold tracking-[0.04em] text-[#7E3F8F]">Expanding Portfolio</span>
+              <div className="mx-auto inline-flex items-center gap-1.5 rounded-full border border-[var(--category-pill-border)] bg-category-pill-gradient px-3 py-1.5 shadow-[0_10px_24px_rgba(90,39,106,0.12)]">
+                <CategoryIcon className="h-4 w-4 text-[var(--category-pill-text)]" />
+                <span className="text-sm font-semibold tracking-[0.04em] text-[var(--category-pill-text)]">Expanding Portfolio</span>
               </div>
 
               <div className="mx-auto max-w-2xl">

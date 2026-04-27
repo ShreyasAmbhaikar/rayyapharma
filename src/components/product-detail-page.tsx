@@ -108,7 +108,7 @@ export function ProductDetailPageContent({ product }: ProductDetailPageContentPr
                     {product.supportRows.map((row, index) => (
                       <tr
                         key={`${product.slug}-${row.focus}`}
-                        className={index % 2 === 0 ? 'bg-white' : 'bg-surface'}
+                        className={index % 2 === 0 ? 'bg-surface-container-lowest' : 'bg-surface'}
                       >
                         <td className="border-b border-outline-variant/20 px-4 py-3 font-medium text-on-surface">
                           {row.focus}

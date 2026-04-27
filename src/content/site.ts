@@ -105,13 +105,13 @@ export const siteConfig = {
     directors: [
       {
         din: '11142461',
-        name: 'POONAM DEVIDAS KARALE',
+        name: 'DR. POONAM DEVIDAS KARALE',
         designation: 'Managing Director',
         appointmentDate: '6th June, 2025',
       },
       {
         din: '11142462',
-        name: 'NIKITA DEVIDAS KARALE',
+        name: 'DR. NIKITA DEVIDAS KARALE',
         designation: 'Managing Director',
         appointmentDate: '6th June, 2025',
       },

@@ -7,7 +7,9 @@ import './globals.css';
 
 import { siteConfig } from '@/content/site';
 import { ScrollReveal } from '@/components/scroll-reveal';
+import { ThemeScript } from '@/components/theme-script';
 import { buildAbsoluteUrl, buildOrganizationSchema, buildWebsiteSchema } from '@/lib/seo';
+import { themeColors } from '@/lib/theme';
 
 const inter = localFont({
   src: [
@@ -80,15 +82,21 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#085693',
-  colorScheme: 'light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: themeColors.light },
+    { media: '(prefers-color-scheme: dark)', color: themeColors.dark },
+  ],
+  colorScheme: 'light dark',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   const schemas = [buildOrganizationSchema(), buildWebsiteSchema()];
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className={`${inter.variable} min-h-screen bg-background font-sans text-on-background antialiased`}>
         <a href="#main-content" className="skip-link">
           Skip to content

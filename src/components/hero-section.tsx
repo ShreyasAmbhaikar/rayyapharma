@@ -33,7 +33,7 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-4 reveal-up reveal-delay-3">
             <Link
               href={hero.primaryAction.href}
-            className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#7BCB45] via-[#1FAE8B] to-[#085693] px-6 py-3 font-button text-button text-white shadow-[0_8px_16px_-4px_rgba(8,86,147,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(8,86,147,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="inline-flex items-center justify-center rounded-lg bg-brand-gradient px-6 py-3 font-button text-button text-on-primary shadow-[0_8px_16px_-4px_rgba(8,86,147,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(8,86,147,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {hero.primaryAction.label}
             </Link>
