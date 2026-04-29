@@ -71,7 +71,7 @@ export const siteConfig = {
     name: 'Rayya Pharma',
     legalName: 'RAYYA PHARMA PRIVATE LIMITED',
     tagline: 'Precise science, personal care.',
-    logo: '/brand/rayya-logo.svg',
+    logo: '/brand/rayya-pharma-dark.png',
     foundingDate: '2025-06-06',
   },
   companyPlaceholders: {
