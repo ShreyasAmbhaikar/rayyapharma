@@ -7,7 +7,7 @@ import { buildAbsoluteUrl } from '@/lib/seo';
 
 const title = 'Our Story | Rayya Pharma Pvt Ltd';
 const description =
-  'Discover the story behind Rayya Pharma Pvt Ltd, our values, and our vision for serving healthcare professionals with trusted pharmaceutical solutions.';
+  'Discover how Dr. Poonam Devidas Karale inspired Rayya Pharma Feto Nurture Tri 1, 2, and 3, a trimester-wise pregnancy nutrition range created with care.';
 
 export const metadata: Metadata = {
   title: {
@@ -16,11 +16,12 @@ export const metadata: Metadata = {
   applicationName: 'Rayya Pharma Pvt Ltd',
   description,
   keywords: [
-    'Rayya Pharma story',
-    'Our Story Rayya Pharma',
+    'Rayya Pharma Feto Nurture Tri story',
+    'Feto Nurture Tri 1 2 3',
+    'Dr Poonam Devidas Karale',
+    'trimester pregnancy nutrition',
+    'prenatal nutrition supplements',
     siteConfig.legalName,
-    'pharmaceutical marketing company',
-    'healthcare distribution company',
   ],
   alternates: {
     canonical: buildAbsoluteUrl('/our-story/'),

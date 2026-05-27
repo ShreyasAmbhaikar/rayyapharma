@@ -100,11 +100,11 @@ export function MobileNav({ currentPath, links }: MobileNavProps) {
               </div>
 
               <ProductSearchForm
-                formClassName="mt-4"
+                formClassName="mt-4 w-full"
                 onNavigate={() => setIsOpen(false)}
-                shellClassName="flex w-full items-center overflow-hidden rounded-full border border-secondary/20 bg-surface-container-lowest/88 p-1 shadow-[var(--shadow-search)] backdrop-blur-md transition-shadow focus-within:shadow-[var(--shadow-search-focus)]"
-                inputClassName="h-10 flex-1 bg-transparent px-4 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none"
-                buttonClassName="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-on-primary shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                shellClassName="flex w-full min-w-0 items-center overflow-hidden rounded-full border border-secondary/20 bg-surface-container-lowest/88 p-1 shadow-[var(--shadow-search)] backdrop-blur-md transition-shadow focus-within:shadow-[var(--shadow-search-focus)]"
+                inputClassName="h-10 min-w-0 flex-1 bg-transparent px-4 pr-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none"
+                buttonClassName="relative z-10 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-on-primary shadow-[0_8px_20px_rgba(8,86,147,0.28)] transition-transform hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
             </div>
           </div>

@@ -1,8 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent } from 'react';
 import Image from 'next/image';
 
+import { ChevronRightIcon } from '@/components/icons';
 import type { ProductDetailImage } from '@/content/products';
 
 type ProductImageGalleryProps = {
@@ -14,6 +16,8 @@ type ProductImageGalleryProps = {
 export function ProductImageGallery({ productName, images, badge }: ProductImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const dragStartX = useRef<number | null>(null);
+  const shouldSkipOpen = useRef(false);
 
   useEffect(() => {
     if (!isOpen) {
@@ -31,15 +35,94 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
   }, [isOpen]);
 
   const activeImage = images[activeIndex];
+  const hasMultipleImages = images.length > 1;
+
+  const showImageAt = (index: number) => {
+    setActiveIndex((index + images.length) % images.length);
+  };
+
+  const showNextImage = () => showImageAt(activeIndex + 1);
+  const showPreviousImage = () => showImageAt(activeIndex - 1);
+
+  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    if (!hasMultipleImages) {
+      return;
+    }
+
+    dragStartX.current = event.clientX;
+    shouldSkipOpen.current = false;
+  };
+
+  const handlePointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    if (!hasMultipleImages || dragStartX.current === null) {
+      return;
+    }
+
+    const dragDistance = event.clientX - dragStartX.current;
+    dragStartX.current = null;
+
+    if (Math.abs(dragDistance) < 44) {
+      return;
+    }
+
+    shouldSkipOpen.current = true;
+
+    if (dragDistance > 0) {
+      showNextImage();
+      return;
+    }
+
+    showPreviousImage();
+  };
+
+  const handlePointerCancel = () => {
+    dragStartX.current = null;
+  };
+
+  const handleMainImageOpen = () => {
+    if (shouldSkipOpen.current) {
+      shouldSkipOpen.current = false;
+      return;
+    }
+
+    setIsOpen(true);
+  };
+
+  const handleMainImageKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setIsOpen(true);
+      return;
+    }
+
+    if (!hasMultipleImages) {
+      return;
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      showNextImage();
+    }
+
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      showPreviousImage();
+    }
+  };
 
   return (
     <>
       <section className="flex flex-col gap-md lg:col-span-6 reveal-soft">
-        <button
-          type="button"
-          onClick={() => setIsOpen(true)}
-          className="relative flex aspect-[5/4] items-center justify-center overflow-hidden rounded-xl border border-outline-variant/30 bg-surface shadow-sm transition-transform hover:scale-[1.01] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:aspect-[6/5]"
-          aria-label={`Open enlarged image for ${productName}`}
+        <div
+          role="button"
+          tabIndex={0}
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
+          onClick={handleMainImageOpen}
+          onKeyDown={handleMainImageKeyDown}
+          className="relative flex aspect-[5/4] touch-pan-y select-none items-center justify-center overflow-hidden rounded-xl border border-outline-variant/30 bg-surface shadow-sm transition-transform hover:scale-[1.01] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:aspect-[6/5]"
+          aria-label={`Open enlarged image for ${productName}. Swipe right for next image.`}
         >
           <Image
             src={activeImage.src}
@@ -56,7 +139,35 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
           <div className="absolute bottom-sm left-1/2 -translate-x-1/2 rounded-full bg-inverse-surface/80 px-4 py-2 text-xs font-semibold text-inverse-on-surface">
             Click to enlarge
           </div>
-        </button>
+
+          {hasMultipleImages ? (
+            <>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  showPreviousImage();
+                }}
+                className="absolute left-sm top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-brand-gradient text-on-primary shadow-[0_10px_28px_rgba(8,86,147,0.34)] transition-all hover:scale-105 hover:shadow-[0_14px_34px_rgba(8,86,147,0.42)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-secondary/70 dark:shadow-[0_10px_28px_rgba(80,217,254,0.22)] dark:hover:shadow-[0_14px_34px_rgba(80,217,254,0.3)]"
+                aria-label="Show previous product image"
+              >
+                <ChevronRightIcon className="h-5 w-5 rotate-180" />
+              </button>
+
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  showNextImage();
+                }}
+                className="absolute right-sm top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-brand-gradient text-on-primary shadow-[0_10px_28px_rgba(8,86,147,0.34)] transition-all hover:scale-105 hover:shadow-[0_14px_34px_rgba(8,86,147,0.42)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-secondary/70 dark:shadow-[0_10px_28px_rgba(80,217,254,0.22)] dark:hover:shadow-[0_14px_34px_rgba(80,217,254,0.3)]"
+                aria-label="Show next product image"
+              >
+                <ChevronRightIcon className="h-5 w-5" />
+              </button>
+            </>
+          ) : null}
+        </div>
 
         {images.length > 0 ? (
           <div className="grid grid-cols-4 gap-sm">
@@ -66,8 +177,11 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
                 type="button"
                 onClick={() => setActiveIndex(index)}
                 aria-label={`Show image ${index + 1} for ${productName}`}
-                className={`relative aspect-square overflow-hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary ${
-                  index === activeIndex ? 'border-2 border-primary' : 'border border-outline-variant/30'
+                aria-current={index === activeIndex}
+                className={`relative aspect-square overflow-hidden rounded-lg transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary ${
+                  index === activeIndex
+                    ? 'border-2 border-primary shadow-[0_0_0_3px_rgba(8,86,147,0.16)] dark:border-secondary dark:shadow-[0_0_0_3px_rgba(80,217,254,0.2)]'
+                    : 'border border-outline-variant/30 opacity-85 hover:opacity-100'
                 }`}
               >
                 <Image

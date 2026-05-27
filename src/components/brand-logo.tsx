@@ -38,9 +38,9 @@ const logoAssets: LogoAsset[] = [
     className: 'hidden dark:block',
     bounds: {
       left: 212,
-      top: 217,
+      top: 189,
       width: 1229,
-      height: 579,
+      height: 636,
     },
   },
 ];

@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
     return {};
   }
 
-  const title = `${product.name} | Rayya Pharma Pvt Ltd`;
+  const productTitle = product.variantLabel ? `${product.name} - ${product.variantLabel}` : product.name;
+  const title = `${productTitle} | Rayya Pharma Pvt Ltd`;
   const description = product.description;
   const url = buildAbsoluteUrl(product.href);
   const image = buildAbsoluteUrl(product.imageSrc);
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
           url: image,
           width: 1200,
           height: 630,
-          alt: `${product.name} product preview`,
+          alt: `${productTitle} product preview`,
         },
       ],
     },
@@ -87,10 +88,12 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     notFound();
   }
 
+  const productTitle = product.variantLabel ? `${product.name} - ${product.variantLabel}` : product.name;
+
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: product.name,
+    name: productTitle,
     description: product.description,
     image: product.detailImages.map((image) => buildAbsoluteUrl(image.src)),
     brand: {
@@ -120,7 +123,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       {
         '@type': 'ListItem',
         position: 3,
-        name: product.name,
+        name: productTitle,
         item: buildAbsoluteUrl(product.href),
       },
     ],

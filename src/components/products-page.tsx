@@ -68,14 +68,14 @@ export function ProductsPageContent() {
         <section className="mx-auto grid max-w-[84rem] grid-cols-1 gap-8 overflow-visible pt-1 pb-xl md:grid-cols-2 lg:grid-cols-3">
           {filteredProducts.map((product, index) => (
             <article
-              key={product.name}
+              key={product.slug}
               className={`relative h-full overflow-visible reveal-soft ${
                 index === 0 ? '' : index === 1 ? 'reveal-delay-1' : index === 2 ? 'reveal-delay-2' : 'reveal-delay-3'
               }`}
             >
               <Link
                 href={product.href}
-                aria-label={`View details for ${product.name}`}
+                aria-label={`View details for ${product.name}${product.variantLabel ? ` ${product.variantLabel}` : ''}`}
                 className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-[22px] border border-[var(--primary-border)] bg-card-gradient px-3 pb-5 pt-3 shadow-[var(--shadow-card)] transition-all duration-300 hover:z-20 hover:animate-card-bounce-up hover:border-primary hover:shadow-[var(--shadow-card-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 <div className="relative overflow-hidden rounded-[18px]">
@@ -91,11 +91,16 @@ export function ProductsPageContent() {
 
                   <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-[var(--category-pill-border)] bg-category-pill-gradient px-2 py-0.5 shadow-[0_8px_20px_rgba(90,39,106,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_12px_24px_rgba(90,39,106,0.16)]">
                     <CategoryIcon className="h-3 w-3 text-[var(--category-pill-text)]" />
-                    <span className="text-[0.78rem] font-semibold text-[var(--category-pill-text)]">{product.category}</span>
+                    <span className="text-[0.78rem] font-semibold text-[var(--category-pill-text)]">{product.badge}</span>
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col px-1 pb-1 pt-4">
+                  {product.variantLabel ? (
+                    <span className="mb-2 inline-flex w-fit rounded-full border border-primary/15 bg-primary/5 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-secondary">
+                      {product.variantLabel}
+                    </span>
+                  ) : null}
                   <h2 className="mb-2 text-[clamp(1.55rem,1.6vw,1.85rem)] font-bold leading-tight tracking-[0.01em] text-primary">
                     {product.name}
                   </h2>
