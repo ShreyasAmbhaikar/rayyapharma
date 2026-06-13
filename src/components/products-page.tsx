@@ -96,15 +96,15 @@ export function ProductsPageContent() {
                 </div>
 
                 <div className="flex flex-1 flex-col px-1 pb-1 pt-4">
-                  {product.variantLabel ? (
-                    <span className="mb-2 inline-flex w-fit rounded-full border border-primary/15 bg-primary/5 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-secondary">
-                      {product.variantLabel}
-                    </span>
-                  ) : null}
-                  <h2 className="mb-2 text-[clamp(1.55rem,1.6vw,1.85rem)] font-bold leading-tight tracking-[0.01em] text-primary">
-                    {product.name}
+                  <h2 className="mb-2 text-[clamp(1.35rem,1.4vw,1.6rem)] font-bold leading-tight tracking-[0.01em] text-primary flex flex-wrap items-baseline gap-x-1.5">
+                    <span>{product.name}</span>
+                    {product.variantLabel ? (
+                      <span className="text-[0.65em] font-medium text-secondary">
+                        ({product.variantLabel})
+                      </span>
+                    ) : null}
                   </h2>
-                  <p className="mb-4 flex-grow font-body-sm text-body-sm leading-7 text-on-surface-variant">
+                  <p className="mb-4 flex-grow font-body-sm text-body-sm leading-7 text-on-surface-variant min-h-[112px]">
                     {product.description}
                   </p>
 

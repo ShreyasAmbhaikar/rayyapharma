@@ -112,7 +112,7 @@ export function ProductImageGallery({ productName, images, badge }: ProductImage
 
   return (
     <>
-      <section className="flex flex-col gap-md lg:col-span-6 reveal-soft">
+      <section className="flex flex-col gap-md lg:col-span-6">
         <div
           role="button"
           tabIndex={0}

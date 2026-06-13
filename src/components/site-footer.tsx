@@ -36,7 +36,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-sm text-on-surface-variant underline underline-offset-4 transition-all hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="rounded-sm text-on-surface-variant transition-all hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {link.label}
                   </Link>
@@ -88,7 +88,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="font-semibold text-primary underline underline-offset-4 transition-colors hover:text-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
-            Marketing Wizards
+            QuantumReach Media
           </a>
         </p>
       </div>

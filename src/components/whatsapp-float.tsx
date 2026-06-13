@@ -17,9 +17,9 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noreferrer"
       aria-label={`Chat with ${siteConfig.name} on WhatsApp`}
-      className="fixed bottom-8 right-5 z-50 inline-flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[radial-gradient(circle_at_30%_30%,#3af0a3_0%,#26d97f_38%,#14b96d_68%,#0a9b5b_100%)] text-white shadow-[0_0_0_6px_rgba(29,214,126,0.08),0_16px_34px_rgba(10,155,91,0.34)] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_0_8px_rgba(29,214,126,0.1),0_20px_38px_rgba(10,155,91,0.38)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
+      className="fixed bottom-8 right-5 z-50 inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[radial-gradient(circle_at_30%_30%,#3af0a3_0%,#26d97f_38%,#14b96d_68%,#0a9b5b_100%)] text-white shadow-[0_0_0_5px_rgba(29,214,126,0.08),0_12px_28px_rgba(10,155,91,0.3)] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_0_6px_rgba(29,214,126,0.1),0_16px_32px_rgba(10,155,91,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
     >
-      <WhatsAppIcon className="h-8 w-8" />
+      <WhatsAppIcon className="h-[26px] w-[26px]" />
     </a>
   );
 }
