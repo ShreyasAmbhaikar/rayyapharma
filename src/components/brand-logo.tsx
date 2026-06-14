@@ -18,29 +18,29 @@ type LogoAsset = {
 };
 
 const sourceDimensions = {
-  width: 768,
-  height: 512,
+  width: 384,
+  height: 256,
 };
 
 const logoAssets: LogoAsset[] = [
   {
-    src: '/brand/rayya-pharma-dark.png',
+    src: '/brand/rayya-pharma-dark.webp',
     className: 'dark:hidden',
     bounds: {
-      left: 106,
-      top: 80,
-      width: 614.5,
-      height: 318,
+      left: 53,
+      top: 40,
+      width: 307.25,
+      height: 159,
     },
   },
   {
-    src: '/brand/rayya-pharma-white.png',
+    src: '/brand/rayya-pharma-white.webp',
     className: 'hidden dark:block',
     bounds: {
-      left: 106,
-      top: 94.5,
-      width: 614.5,
-      height: 318,
+      left: 53,
+      top: 47.25,
+      width: 307.25,
+      height: 159,
     },
   },
 ];

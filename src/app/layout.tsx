@@ -74,9 +74,9 @@ export const metadata: Metadata = {
     images: [buildAbsoluteUrl(siteConfig.socialImage)],
   },
   icons: {
-    icon: [{ url: '/brand/rayya-pharma-dark.png', type: 'image/png' }],
+    icon: [{ url: '/brand/rayya-pharma-dark.webp', type: 'image/webp' }],
     apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-    shortcut: ['/brand/rayya-pharma-dark.png'],
+    shortcut: ['/brand/rayya-pharma-dark.webp'],
   },
   manifest: '/manifest.webmanifest',
 };

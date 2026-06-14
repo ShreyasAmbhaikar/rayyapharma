@@ -16,9 +16,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: themeColors.light,
     icons: [
       {
-        src: '/brand/rayya-pharma-dark.png',
+        src: '/brand/rayya-pharma-dark.webp',
         sizes: 'any',
-        type: 'image/png',
+        type: 'image/webp',
       },
       {
         src: '/icons/icon-192.png',
