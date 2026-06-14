@@ -28,7 +28,7 @@ export const siteConfig = {
   defaultTitle: 'Rayya Pharma',
   description:
     'Rayya Pharma Private Limited is an active private limited pharmaceutical company registered with RoC-Pune under CIN U47720PN2025PTC242739, based in Moshi, Pune, Maharashtra, India.',
-  siteUrl: 'https://www.rayya-pharma.example',
+  siteUrl: 'https://www.rayyapharma.com',
   locale: 'en_IN',
   socialImage: '/seo/rayya-og.png',
   contactHref: '/contact/',
