@@ -6,38 +6,24 @@ const revealSelector = '.reveal-fade, .reveal-up, .reveal-soft';
 
 export function ScrollReveal() {
   useEffect(() => {
+    // 1. Quick check for reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      document.querySelectorAll(revealSelector).forEach((element) => {
+        if (element instanceof HTMLElement) {
+          element.dataset.revealVisible = 'true';
+        }
+      });
+      return;
+    }
+
     const nodes = new Set<HTMLElement>();
-
-    const setVisible = (element: Element) => {
-      if (element instanceof HTMLElement) {
-        element.dataset.revealVisible = 'true';
-      }
-    };
-
-    const observeElement = (element: Element, observer?: IntersectionObserver) => {
-      if (!(element instanceof HTMLElement)) {
-        return;
-      }
-
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setVisible(element);
-        return;
-      }
-
-      if (nodes.has(element)) {
-        return;
-      }
-
-      nodes.add(element);
-      element.dataset.revealVisible = 'false';
-      observer?.observe(element);
-    };
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(entry.target);
+          if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+            entry.target.dataset.revealVisible = 'true';
             revealObserver.unobserve(entry.target);
           }
         });
@@ -45,25 +31,53 @@ export function ScrollReveal() {
       {
         rootMargin: '0px 0px -10% 0px',
         threshold: 0.14,
-      },
+      }
     );
 
-    document.querySelectorAll(revealSelector).forEach((element) => observeElement(element, revealObserver));
+    let scanFrameId: number | null = null;
 
-    const mutationObserver = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (!(node instanceof HTMLElement)) {
-            return;
-          }
+    const runScan = () => {
+      scanFrameId = null;
 
-          if (node.matches(revealSelector)) {
-            observeElement(node, revealObserver);
-          }
+      const elements = Array.from(document.querySelectorAll(revealSelector)) as HTMLElement[];
+      const newElements = elements.filter((el) => !nodes.has(el));
+      if (newElements.length === 0) {
+        return;
+      }
 
-          node.querySelectorAll(revealSelector).forEach((element) => observeElement(element, revealObserver));
-        });
+      // Batch read viewport boundaries
+      const viewportHeight = window.innerHeight;
+      const elementStates = newElements.map((el) => {
+        const rect = el.getBoundingClientRect();
+        const isInViewport = rect.top < viewportHeight && rect.bottom > 0;
+        return { el, isInViewport };
       });
+
+      // Batch write dataset properties and setup observers
+      elementStates.forEach(({ el, isInViewport }) => {
+        nodes.add(el);
+        if (isInViewport) {
+          el.dataset.revealVisible = 'true';
+        } else {
+          el.dataset.revealVisible = 'false';
+          revealObserver.observe(el);
+        }
+      });
+    };
+
+    const requestScan = () => {
+      if (scanFrameId !== null) {
+        return;
+      }
+      scanFrameId = requestAnimationFrame(runScan);
+    };
+
+    // Run initial scan
+    requestScan();
+
+    // Observe child additions using MutationObserver, but debounced
+    const mutationObserver = new MutationObserver(() => {
+      requestScan();
     });
 
     mutationObserver.observe(document.body, {
@@ -72,6 +86,9 @@ export function ScrollReveal() {
     });
 
     return () => {
+      if (scanFrameId !== null) {
+        cancelAnimationFrame(scanFrameId);
+      }
       mutationObserver.disconnect();
       revealObserver.disconnect();
       nodes.clear();
