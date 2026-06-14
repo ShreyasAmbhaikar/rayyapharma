@@ -14,22 +14,22 @@ import { themeColors } from '@/lib/theme';
 const inter = localFont({
   src: [
     {
-      path: '../assets/fonts/inter-400.ttf',
+      path: '../assets/fonts/inter-400.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../assets/fonts/inter-500.ttf',
+      path: '../assets/fonts/inter-500.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../assets/fonts/inter-600.ttf',
+      path: '../assets/fonts/inter-600.woff2',
       weight: '600',
       style: 'normal',
     },
     {
-      path: '../assets/fonts/inter-700.ttf',
+      path: '../assets/fonts/inter-700.woff2',
       weight: '700',
       style: 'normal',
     },

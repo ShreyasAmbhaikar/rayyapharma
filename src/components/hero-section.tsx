@@ -14,6 +14,7 @@ export function HeroSection() {
           alt={hero.image.alt}
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center"
         />
