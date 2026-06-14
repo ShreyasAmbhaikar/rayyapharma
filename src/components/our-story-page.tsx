@@ -80,6 +80,7 @@ export function OurStoryPageContent() {
                   <Link
                     key={product.title}
                     href={product.href}
+                    prefetch={false}
                     className={`group rounded-[1.35rem] border border-outline-variant/35 bg-surface-container-lowest/80 p-3 transition duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-card)] ${
                       index === 1 ? 'mt-8' : index === 2 ? 'mt-16' : ''
                     }`}
@@ -171,6 +172,7 @@ export function OurStoryPageContent() {
               <p className="mt-3 font-body-md text-body-md text-on-surface-variant">{product.focus}</p>
               <Link
                 href={product.href}
+                prefetch={false}
                 className="mt-5 inline-flex font-button text-button text-secondary transition hover:text-primary"
               >
                 View product details

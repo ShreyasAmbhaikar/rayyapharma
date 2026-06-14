@@ -88,6 +88,7 @@ export function MobileNav({ currentPath, links }: MobileNavProps) {
                     <Link
                       key={link.href}
                       href={link.href}
+                      prefetch={false}
                       onClick={() => setIsOpen(false)}
                       className={`rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
                         isActive ? 'bg-surface-container-high text-primary' : 'text-on-surface-variant hover:bg-surface-container-low'

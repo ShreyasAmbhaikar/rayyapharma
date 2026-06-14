@@ -15,6 +15,7 @@ export function SiteFooter() {
         <div className="reveal-up">
           <Link
             href="/"
+            prefetch={false}
             aria-label={`${siteConfig.name} home`}
             className="mb-3 inline-flex w-fit rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
@@ -36,6 +37,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="rounded-sm text-on-surface-variant transition-all hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {link.label}

@@ -1058,11 +1058,11 @@ export function ProductDetailPageContent({ product }: ProductDetailPageContentPr
     <div className="font-body-md text-body-md text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed">
       <section className="section-shell py-xl">
         <div className="mb-sm flex flex-wrap items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
-          <Link href="/products/" className="transition-colors hover:text-primary">
+          <Link href="/products/" prefetch={false} className="transition-colors hover:text-primary">
             Products
           </Link>
           <ChevronRightIcon className="h-4 w-4 text-outline" />
-          <Link href="/products/" className="transition-colors hover:text-primary">
+          <Link href="/products/" prefetch={false} className="transition-colors hover:text-primary">
             {product.category}
           </Link>
           <ChevronRightIcon className="h-4 w-4 text-outline" />

@@ -30,10 +30,10 @@ export function PlaceholderPage({ routeKey }: PlaceholderPageProps) {
                   SEO foundation.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/" className="primary-button">
+                  <Link href="/" prefetch={false} className="primary-button">
                     Back to Homepage
                   </Link>
-                  <Link href="/contact/" className="secondary-button">
+                  <Link href="/contact/" prefetch={false} className="secondary-button">
                     Contact Placeholder
                   </Link>
                 </div>

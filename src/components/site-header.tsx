@@ -28,6 +28,7 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
       >
         <Link
           href="/"
+          prefetch={false}
           aria-label={`${siteConfig.name} home`}
           className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
@@ -42,6 +43,7 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className={`border-b-2 pb-1 text-sm font-semibold transition-colors ${
                   isActive
                     ? 'border-primary text-primary'

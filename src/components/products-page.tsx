@@ -75,6 +75,7 @@ export function ProductsPageContent() {
             >
               <Link
                 href={product.href}
+                prefetch={false}
                 aria-label={`View details for ${product.name}${product.variantLabel ? ` ${product.variantLabel}` : ''}`}
                 className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-[22px] border border-[var(--primary-border)] bg-card-gradient px-3 pb-5 pt-3 shadow-[var(--shadow-card)] transition-all duration-300 hover:z-20 hover:animate-card-bounce-up hover:border-primary hover:shadow-[var(--shadow-card-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
