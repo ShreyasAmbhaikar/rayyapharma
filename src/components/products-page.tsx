@@ -20,7 +20,33 @@ function PrenatalIcon({ className }: { className?: string }) {
   );
 }
 
-function CategoryIcon({ className }: { className?: string }) {
+function FertilityIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className={className}>
+      <circle cx="9.5" cy="14.5" r="5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5L20 4m0 0h-5m5 0v5" />
+      <circle cx="9.5" cy="14.5" r="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FemaleFertilityIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className={className}>
+      <circle cx="12" cy="9" r="5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14v7m-3.5-3.5h7" />
+      <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function CategoryIcon({ category, className }: { category?: string; className?: string }) {
+  if (category === 'Male Fertility') {
+    return <FertilityIcon className={className} />;
+  }
+  if (category === 'Female Fertility') {
+    return <FemaleFertilityIcon className={className} />;
+  }
   return <PrenatalIcon className={className} />;
 }
 
@@ -91,7 +117,7 @@ export function ProductsPageContent() {
                   </div>
 
                   <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-[var(--category-pill-border)] bg-category-pill-gradient px-2 py-0.5 shadow-[0_8px_20px_rgba(90,39,106,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_12px_24px_rgba(90,39,106,0.16)]">
-                    <CategoryIcon className="h-3 w-3 text-[var(--category-pill-text)]" />
+                    <CategoryIcon category={product.category} className="h-3 w-3 text-[var(--category-pill-text)]" />
                     <span className="text-[0.78rem] font-semibold text-[var(--category-pill-text)]">{product.badge}</span>
                   </div>
                 </div>

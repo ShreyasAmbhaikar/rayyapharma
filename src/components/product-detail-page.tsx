@@ -1051,6 +1051,238 @@ function Tri2MorningCustomContent() {
   );
 }
 
+function SpermaProCustomContent() {
+  return (
+    <div className="flex flex-col gap-lg mt-sm text-on-surface">
+      {/* HOW TO TAKE */}
+      <div className="flex flex-col gap-md">
+        <h2 className="flex items-center gap-2 font-h3 text-h3 text-on-surface">
+          <ScienceIcon className="h-6 w-6 text-secondary" />
+          <span>How to Take</span>
+        </h2>
+        <div className="rounded-3xl border border-outline-variant/35 bg-gradient-to-br from-surface-container-low to-surface-container-lowest/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.05)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/30 gap-4 md:gap-0">
+            <div className="md:col-span-1 pb-4 md:pb-0 md:pr-6 flex flex-col gap-1.5">
+              <span className="block font-label-caps text-label-caps text-outline mb-0.5 leading-none">Dosage</span>
+              <span className="font-body-md text-body-md font-bold text-on-surface leading-tight">One tablet daily</span>
+            </div>
+            <div className="md:col-span-2 pt-4 md:pt-0 md:pl-6 flex flex-col gap-1.5">
+              <span className="block font-label-caps text-label-caps text-outline mb-0.5 leading-none">Timing</span>
+              <span className="font-body-md text-body-md font-medium text-on-surface leading-relaxed">
+                Take with or after meals with water as advised
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Key Benefits & Scientific Focus */}
+      <section className="flex flex-col gap-md">
+        <h2 className="flex items-center gap-2 font-h3 text-h3 text-on-surface">
+          <NotesIcon className="h-6 w-6 text-secondary" />
+          <span>Key Benefits &amp; Nutritional Focus</span>
+        </h2>
+
+        <div className="grid grid-cols-1 gap-md mt-2">
+          {/* I. Supports Sperm Health */}
+          <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50/90 to-indigo-100/25 p-7 shadow-[0_4px_20px_rgba(8,86,147,0.04)] hover:shadow-[0_8px_30px_rgba(8,86,147,0.08)] transition-all duration-300 dark:from-blue-950/30 dark:to-indigo-950/10 dark:border-blue-800/40">
+            <h3 className="font-bold text-[1.15rem] text-blue-950 dark:text-blue-200 mb-2">
+              I. Supports Sperm Health (Motility &amp; Vitality)
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-blue-950/80 dark:text-blue-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-blue-950 dark:text-blue-100 block mb-0.5">Co-enzyme Q10 &amp; L-Carnitine</strong>
+                  Essential mitochondrial nutrients that support cellular ATP production and sperm motility.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-blue-950/80 dark:text-blue-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-blue-950 dark:text-blue-100 block mb-0.5">Zinc</strong>
+                  Crucial micronutrient for normal spermatogenesis and testosterone synthesis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* II. Supports DNA Quality */}
+          <div className="rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50/90 to-orange-100/25 p-7 shadow-[0_4px_20px_rgba(217,119,6,0.04)] hover:shadow-[0_8px_30px_rgba(217,119,6,0.08)] transition-all duration-300 dark:from-amber-950/30 dark:to-orange-950/10 dark:border-amber-800/40">
+            <h3 className="font-bold text-[1.15rem] text-amber-950 dark:text-amber-200 mb-2">
+              II. Supports DNA Quality &amp; Genomic Integrity
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-amber-950/80 dark:text-amber-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-amber-950 dark:text-amber-100 block mb-0.5">N-Acetyl L-Cysteine &amp; Glutathione</strong>
+                  Intracellular antioxidant precursors protecting sperm chromatin architecture against oxidative breaks.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-amber-950/80 dark:text-amber-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-amber-950 dark:text-amber-100 block mb-0.5">Selenium</strong>
+                  Vital trace element providing structural stability to sperm tail components.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* III. Powerful Antioxidant Defense */}
+          <div className="rounded-3xl border border-rose-200 bg-gradient-to-br from-rose-50/90 to-pink-100/25 p-7 shadow-[0_4px_20px_rgba(225,29,72,0.04)] hover:shadow-[0_8px_30px_rgba(225,29,72,0.08)] transition-all duration-300 dark:from-rose-950/30 dark:to-pink-950/10 dark:border-rose-800/40">
+            <h3 className="font-bold text-[1.15rem] text-rose-950 dark:text-rose-200 mb-2">
+              III. Powerful Antioxidant Defense
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-rose-100/80 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-rose-950/80 dark:text-rose-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-rose-950 dark:text-rose-100 block mb-0.5">Lycopene, Vitamin C &amp; Vitamin E</strong>
+                  Synergistic free-radical scavengers that neutralize reactive oxygen species and curb lipid peroxidation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* IV. Energy & Stamina Support */}
+          <div className="rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50/90 to-fuchsia-100/25 p-7 shadow-[0_4px_20px_rgba(124,58,237,0.04)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.08)] transition-all duration-300 dark:from-violet-950/30 dark:to-fuchsia-950/10 dark:border-violet-800/40">
+            <h3 className="font-bold text-[1.15rem] text-violet-950 dark:text-violet-200 mb-2">
+              IV. Energy &amp; Stamina Support
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-violet-100/80 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-violet-950/80 dark:text-violet-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-violet-950 dark:text-violet-100 block mb-0.5">Vitamin D3 &amp; Essential Co-factors</strong>
+                  Support cellular bioenergetics, reducing fatigue and promoting reproductive stamina.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <div className="rounded-lg border-l-4 border-red-500 bg-red-50/70 dark:bg-red-950/10 p-sm shadow-sm mt-4">
+        <p className="font-body-sm text-body-sm text-red-800/95 dark:text-red-300">
+          <strong className="text-red-700 dark:text-red-400">DISCLAIMER:</strong> Nutritional supplements should be taken under the guidance of a healthcare professional.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function OvaproCustomContent() {
+  return (
+    <div className="flex flex-col gap-lg mt-sm text-on-surface">
+      {/* HOW TO TAKE */}
+      <div className="flex flex-col gap-md">
+        <h2 className="flex items-center gap-2 font-h3 text-h3 text-on-surface">
+          <ScienceIcon className="h-6 w-6 text-secondary" />
+          <span>How to Take</span>
+        </h2>
+        <div className="rounded-3xl border border-outline-variant/35 bg-gradient-to-br from-surface-container-low to-surface-container-lowest/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.05)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/30 gap-4 md:gap-0">
+            <div className="md:col-span-1 pb-4 md:pb-0 md:pr-6 flex flex-col gap-1.5">
+              <span className="block font-label-caps text-label-caps text-outline mb-0.5 leading-none">Dosage</span>
+              <span className="font-body-md text-body-md font-bold text-on-surface leading-tight">One tablet daily</span>
+            </div>
+            <div className="md:col-span-2 pt-4 md:pt-0 md:pl-6 flex flex-col gap-1.5">
+              <span className="block font-label-caps text-label-caps text-outline mb-0.5 leading-none">Timing</span>
+              <span className="font-body-md text-body-md font-medium text-on-surface leading-relaxed">
+                Take in the evening after dinner with water as advised
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Key Benefits & Scientific Focus */}
+      <section className="flex flex-col gap-md">
+        <h2 className="flex items-center gap-2 font-h3 text-h3 text-on-surface">
+          <NotesIcon className="h-6 w-6 text-secondary" />
+          <span>Key Benefits &amp; Nutritional Focus</span>
+        </h2>
+
+        <div className="grid grid-cols-1 gap-md mt-2">
+          {/* I. Supports Ovarian Health */}
+          <div className="rounded-3xl border border-rose-200 bg-gradient-to-br from-rose-50/90 to-pink-100/25 p-7 shadow-[0_4px_20px_rgba(225,29,72,0.04)] hover:shadow-[0_8px_30px_rgba(225,29,72,0.08)] transition-all duration-300 dark:from-rose-950/30 dark:to-pink-950/10 dark:border-rose-800/40">
+            <h3 className="font-bold text-[1.15rem] text-rose-950 dark:text-rose-200 mb-2">
+              I. Supports Ovarian Health &amp; Cycle Regularity
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-rose-100/80 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-rose-950/80 dark:text-rose-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-rose-950 dark:text-rose-100 block mb-0.5">Myo-Inositol &amp; Zinc</strong>
+                  Restores ovarian insulin sensitivity, balances hormonal ratios, and supports regular cycles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* II. Enhances Egg Quality & Fertility */}
+          <div className="rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50/90 to-orange-100/25 p-7 shadow-[0_4px_20px_rgba(217,119,6,0.04)] hover:shadow-[0_8px_30px_rgba(217,119,6,0.08)] transition-all duration-300 dark:from-amber-950/30 dark:to-orange-950/10 dark:border-amber-800/40">
+            <h3 className="font-bold text-[1.15rem] text-amber-950 dark:text-amber-200 mb-2">
+              II. Enhances Egg Quality &amp; Fertility
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-amber-950/80 dark:text-amber-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-amber-950 dark:text-amber-100 block mb-0.5">Co-enzyme Q10 &amp; Melatonin</strong>
+                  Enhances mitochondrial ATP generation in developing oocytes and protects follicular fluid against oxidative damage.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* III. Regulates Hormonal Balance */}
+          <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50/90 to-indigo-100/25 p-7 shadow-[0_4px_20px_rgba(8,86,147,0.04)] hover:shadow-[0_8px_30px_rgba(8,86,147,0.08)] transition-all duration-300 dark:from-blue-950/30 dark:to-indigo-950/10 dark:border-blue-800/40">
+            <h3 className="font-bold text-[1.15rem] text-blue-950 dark:text-blue-200 mb-2">
+              III. Regulates Hormonal Balance
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-blue-950/80 dark:text-blue-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-blue-950 dark:text-blue-100 block mb-0.5">L-Methylfolate, Vitamin B12 &amp; Vitamin D3</strong>
+                  Support cellular methylation, reduce homocysteine, and support optimal endometrial receptivity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* IV. Overall Well-Being & Antioxidant Defense */}
+          <div className="rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50/90 to-fuchsia-100/25 p-7 shadow-[0_4px_20px_rgba(124,58,237,0.04)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.08)] transition-all duration-300 dark:from-violet-950/30 dark:to-fuchsia-950/10 dark:border-violet-800/40">
+            <h3 className="font-bold text-[1.15rem] text-violet-950 dark:text-violet-200 mb-2">
+              IV. Overall Well-Being &amp; Antioxidant Defense
+            </h3>
+            <div className="flex flex-col gap-3 mt-2">
+              <div className="flex items-start gap-3">
+                <span className="flex-none h-5 w-5 rounded-full bg-violet-100/80 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 flex items-center justify-center font-bold text-xs select-none">✓</span>
+                <p className="font-body-md text-[0.93rem] text-violet-950/80 dark:text-violet-300/80 leading-relaxed -mt-0.5">
+                  <strong className="text-violet-950 dark:text-violet-100 block mb-0.5">N-Acetyl Cysteine &amp; Selenium</strong>
+                  Boost intracellular glutathione, soothing follicular inflammation and protecting reproductive tissue health.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <div className="rounded-lg border-l-4 border-red-500 bg-red-50/70 dark:bg-red-950/10 p-sm shadow-sm mt-4">
+        <p className="font-body-sm text-body-sm text-red-800/95 dark:text-red-300">
+          <strong className="text-red-700 dark:text-red-400">DISCLAIMER:</strong> Nutritional supplements should be taken under the guidance of a healthcare professional.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export function ProductDetailPageContent({ product }: ProductDetailPageContentProps) {
   const productTitle = product.variantLabel ? `${product.name} - ${product.variantLabel}` : product.name;
 
@@ -1115,6 +1347,10 @@ export function ProductDetailPageContent({ product }: ProductDetailPageContentPr
               <Tri2EveningCustomContent />
             ) : product.slug === 'feto-nurture-tri-1' ? (
               <Tri1MorningCustomContent />
+            ) : product.slug === 'sperma-pro' ? (
+              <SpermaProCustomContent />
+            ) : product.slug === 'ovapro' ? (
+              <OvaproCustomContent />
             ) : (
               <SequentialSupportSections sections={product.supportSections} />
             )}

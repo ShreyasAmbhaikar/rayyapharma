@@ -1,4 +1,4 @@
-export type ProductIconKey = 'prenatal';
+export type ProductIconKey = 'prenatal' | 'fertility' | 'female-fertility';
 
 export type ProductDetailImage = {
   alt: string;
@@ -516,6 +516,173 @@ export const products: ProductRecord[] = [
       'prenatal DHA calcium magnesium',
       'pregnancy evening dose tablet',
       'maternal muscle cramp support',
+    ],
+  },
+  {
+    slug: 'sperma-pro',
+    name: 'SPERMA-PRO',
+    category: 'Male Fertility',
+    type: 'TABLET',
+    badge: 'Male Fertility',
+    description:
+      'Male fertility nutraceutical formulated with Co-enzyme Q10, L-Carnitine, NAC, and Glutathione to support sperm motility, count, DNA quality, and cellular stamina.',
+    imageSrc: '/images/products/sperma-pro.webp',
+    alt: 'Pack-shot photo of SPERMA-PRO for Male Fertility showing the carton pack and blister strip.',
+    detailImages: [
+      {
+        src: '/images/products/sperma-pro.webp',
+        alt: 'Pack-shot photo of SPERMA-PRO for Male Fertility showing the carton pack and blister strip.',
+      },
+      {
+        src: '/images/products/sperma-pro-box.webp',
+        alt: 'Box photo of SPERMA-PRO showing the carton pack design.',
+      },
+    ],
+    href: buildProductHref('sperma-pro'),
+    icon: 'fertility',
+    genericName: 'Co-enzyme Q10, Antioxidants, Vitamins, Minerals & L-Carnitine L-Tartrate Tablets',
+    therapeuticClass: 'Male Fertility Nutraceutical',
+    dosageForm: 'Tablet',
+    availableStrengths: '10 x 1 x 10 tablets',
+    administration: 'Oral, 1 tablet daily with or after meals, or as directed by the Healthcare Professional',
+    overview:
+      'SPERMA-PRO is a targeted male fertility nutraceutical designed to address seminal oxidative stress, enhance mitochondrial bioenergetics, and protect sperm DNA integrity. Featuring a synergistic combination of Ubiquinone (CoQ10), L-Carnitine L-Tartrate, NAC, Glutathione, and essential cofactors, SPERMA-PRO supports sperm motility, count, and overall reproductive vitality.',
+    importantNote:
+      'Nutritional Food Supplement. Not for medicinal use. Use under the guidance of a qualified healthcare professional. Store below 30°C in a cool, dry & dark place.',
+    supportSections: [
+      {
+        title: 'I. Supports Sperm Health (Motility & Vitality)',
+        bullets: [
+          'Co-enzyme Q10 (Ubiquinone): Vital electron carrier in mitochondrial ATP synthesis that directly drives flagellar motility.',
+          'L-Carnitine L-Tartrate: Enhances fatty acid transport into mitochondria for sustained sperm propulsion.',
+          'Zinc: Crucial micronutrient for testicular development, spermatogenesis, and healthy seminal volume.',
+        ],
+      },
+      {
+        title: 'II. Supports DNA Quality (Chromatin Integrity)',
+        bullets: [
+          'N-Acetyl L-Cysteine (NAC): Direct precursor to glutathione, reducing sperm DNA fragmentation index (DFI).',
+          'L-Glutathione: Master intracellular antioxidant shielding sperm chromatin from oxidative strand breaks.',
+          'Selenium: Essential trace cofactor preserving sperm flagellar architecture and genomic stability.',
+        ],
+      },
+      {
+        title: 'III. Powerful Antioxidant Defense',
+        bullets: [
+          'Lycopene: Lipophilic carotenoid with high testicular affinity that inhibits lipid peroxidation of sperm membranes.',
+          'Vitamin C: Primary aqueous antioxidant in seminal plasma, neutralizing reactive oxygen species (ROS).',
+          'Vitamin E: Protects polyunsaturated fatty acids in sperm cell membranes against oxidative degradation.',
+        ],
+      },
+      {
+        title: 'IV. Energy & Stamina Support',
+        bullets: [
+          'Vitamin D3: Supports androgen receptor function and intracellular calcium homeostasis.',
+          'Cellular Stamina: Mitochondrial nutrients reduce fatigue and support overall reproductive wellness.',
+        ],
+      },
+      {
+        title: 'HOW TO TAKE',
+        bullets: [
+          'Dosage: One tablet daily.',
+          'Timing: Take with or immediately after a meal with a full glass of water.',
+          'Duration: Recommended continuous use for at least 90 days or as advised by your healthcare professional.',
+        ],
+      },
+    ],
+    keywords: [
+      'SPERMA-PRO',
+      'Perma Pro',
+      'SPERMA PRO',
+      'Male Fertility',
+      'Co-enzyme Q10',
+      'L-Carnitine',
+      'Sperm Health',
+      'DNA Quality',
+      'Antioxidant',
+      'Rayya Pharma',
+    ],
+  },
+  {
+    slug: 'ovapro',
+    name: 'OVAPRO',
+    category: 'Female Fertility',
+    type: 'TABLET',
+    badge: 'Female Fertility',
+    description:
+      'Female fertility nutraceutical formulated with Myo-Inositol, Co-enzyme Q10, N-Acetyl Cysteine, and Melatonin to support ovarian health, egg quality, and hormonal balance.',
+    imageSrc: '/images/products/ovapro.webp',
+    alt: 'Pack-shot photo of OVAPRO for Women\'s Fertility & Wellness showing the carton pack and blister strip.',
+    detailImages: [
+      {
+        src: '/images/products/ovapro.webp',
+        alt: 'Pack-shot photo of OVAPRO for Women\'s Fertility & Wellness showing the carton pack and blister strip.',
+      },
+      {
+        src: '/images/products/ovapro-box.webp',
+        alt: 'Box photo of OVAPRO showing the carton pack design.',
+      },
+    ],
+    href: buildProductHref('ovapro'),
+    icon: 'female-fertility',
+    genericName: 'Multivitamin & Multimineral with Co Q10, Myo-Inositol, N-Acetyl Cysteine & Melatonin Tablets',
+    therapeuticClass: 'Female Fertility & Ovarian Health Nutraceutical',
+    dosageForm: 'Tablet',
+    availableStrengths: '10 x 1 x 10 tablets',
+    administration: 'Oral, 1 tablet daily preferably in the evening after meals, or as directed by the Healthcare Professional',
+    overview:
+      'OVAPRO is an advanced female fertility and ovarian support formulation engineered to promote oocyte quality and hormonal balance. Combining Myo-Inositol, Co-enzyme Q10, N-Acetyl Cysteine, Melatonin, active L-Methylfolate, and essential trace minerals, OVAPRO addresses oxidative stress in follicular fluid and supports healthy ovulatory function.',
+    importantNote:
+      'Nutritional Food Supplement. Not for medicinal use. Use under the guidance of a qualified healthcare professional. Store below 25°C in a cool, dry & dark place.',
+    supportSections: [
+      {
+        title: 'I. Supports Ovarian Health & Ovulatory Function',
+        bullets: [
+          'Myo-Inositol: Normalizes ovarian insulin sensitivity, balances LH/FSH ratios, and promotes regular cycles.',
+          'Zinc Picolinate: Highly bioavailable zinc form essential for follicular growth and cellular division.',
+        ],
+      },
+      {
+        title: 'II. Enhances Egg Quality & Fertility',
+        bullets: [
+          'Co-enzyme Q10: Enhances mitochondrial respiration and ATP generation in developing oocytes.',
+          'Melatonin: Potent free-radical scavenger in follicular fluid, protecting oocytes during maturation.',
+        ],
+      },
+      {
+        title: 'III. Regulates Hormonal Balance',
+        bullets: [
+          'L-Methylfolate & Vitamin B12: Support healthy one-carbon methylation pathways and lower homocysteine.',
+          'Vitamin D3: Essential for ovarian reserve modulation and optimal endometrial receptivity.',
+        ],
+      },
+      {
+        title: 'IV. Promotes Overall Well-Being & Antioxidant Defense',
+        bullets: [
+          'N-Acetyl Cysteine: Precursor to glutathione that helps ease chronic follicular oxidative stress.',
+          'Selenium: Crucial cofactor for antioxidant enzymes, supporting overall metabolic health.',
+        ],
+      },
+      {
+        title: 'HOW TO TAKE',
+        bullets: [
+          'Dosage: One tablet daily.',
+          'Timing: Take preferably in the evening after dinner with water.',
+          'Duration: Recommended continuous use for at least 90 days or as advised by your healthcare professional.',
+        ],
+      },
+    ],
+    keywords: [
+      'OVAPRO',
+      'Ova Pro',
+      'Female Fertility',
+      'Women\'s Fertility',
+      'Myo-Inositol',
+      'Co-enzyme Q10',
+      'Melatonin',
+      'Egg Quality',
+      'Ovarian Health',
+      'Rayya Pharma',
     ],
   },
 ];
